@@ -1,85 +1,90 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Cognitive Sanctuary | Secure Access</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "on-primary-fixed": "#000c62",
-              "secondary-container": "#8bf1e6",
-              "secondary-fixed": "#8ef4e9",
-              "surface-dim": "#d8dadc",
-              "surface-bright": "#f8f9fb",
-              "primary-container": "#4551af",
-              "inverse-on-surface": "#eff1f3",
-              "secondary": "#006a63",
-              "on-secondary-container": "#006f67",
-              "surface": "#f8f9fb",
-              "tertiary-container": "#795300",
-              "on-tertiary-fixed": "#281900",
-              "tertiary-fixed": "#ffdeac",
-              "surface-variant": "#e0e3e5",
-              "on-primary": "#ffffff",
-              "surface-container-high": "#e6e8ea",
-              "on-surface-variant": "#454652",
-              "on-primary-container": "#cbcfff",
-              "on-error": "#ffffff",
-              "primary": "#2b3896",
-              "outline-variant": "#c5c5d4",
-              "on-secondary-fixed-variant": "#00504a",
-              "on-error-container": "#93000a",
-              "surface-container-lowest": "#ffffff",
-              "inverse-surface": "#2d3133",
-              "surface-container-highest": "#e0e3e5",
-              "error": "#ba1a1a",
-              "primary-fixed-dim": "#bcc2ff",
-              "surface-tint": "#4955b3",
-              "on-background": "#191c1e",
-              "on-tertiary": "#ffffff",
-              "surface-container": "#eceef0",
-              "surface-container-low": "#f2f4f6",
-              "on-surface": "#191c1e",
-              "secondary-fixed-dim": "#71d7cd",
-              "tertiary-fixed-dim": "#ffba38",
-              "outline": "#757684",
-              "on-secondary": "#ffffff",
-              "tertiary": "#5b3d00",
-              "on-tertiary-fixed-variant": "#604100",
-              "on-tertiary-container": "#ffc971",
-              "on-primary-fixed-variant": "#303c9a",
-              "error-container": "#ffdad6",
-              "background": "#f8f9fb",
-              "on-secondary-fixed": "#00201d",
-              "primary-fixed": "#dfe0ff",
-              "inverse-primary": "#bcc2ff"
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Cognitive Sanctuary | Secure Access</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#000c62",
+                        "secondary-container": "#8bf1e6",
+                        "secondary-fixed": "#8ef4e9",
+                        "surface-dim": "#d8dadc",
+                        "surface-bright": "#f8f9fb",
+                        "primary-container": "#4551af",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary": "#006a63",
+                        "on-secondary-container": "#006f67",
+                        "surface": "#f8f9fb",
+                        "tertiary-container": "#795300",
+                        "on-tertiary-fixed": "#281900",
+                        "tertiary-fixed": "#ffdeac",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface-variant": "#454652",
+                        "on-primary-container": "#cbcfff",
+                        "on-error": "#ffffff",
+                        "primary": "#2b3896",
+                        "outline-variant": "#c5c5d4",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-highest": "#e0e3e5",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#bcc2ff",
+                        "surface-tint": "#4955b3",
+                        "on-background": "#191c1e",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "surface-container-low": "#f2f4f6",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed-dim": "#71d7cd",
+                        "tertiary-fixed-dim": "#ffba38",
+                        "outline": "#757684",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#5b3d00",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "on-tertiary-container": "#ffc971",
+                        "on-primary-fixed-variant": "#303c9a",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fb",
+                        "on-secondary-fixed": "#00201d",
+                        "primary-fixed": "#dfe0ff",
+                        "inverse-primary": "#bcc2ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
             },
-            fontFamily: {
-              "headline": ["Manrope"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .glass-effect {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
+
         .auth-gradient {
             background: linear-gradient(135deg, #2b3896 0%, #4551af 100%);
         }
@@ -88,146 +93,170 @@
 <body class="bg-surface font-body text-on-surface antialiased">
 <!-- Asymmetric Hero Section -->
 <main class="min-h-screen flex flex-col md:flex-row overflow-hidden">
-<!-- Left Side: Branding & Value Prop -->
-<section class="hidden md:flex md:w-1/2 relative flex-col justify-between p-16 auth-gradient overflow-hidden">
-<!-- Background Decorative Pattern -->
-<div class="absolute inset-0 opacity-10 pointer-events-none">
-<svg height="100%" preserveaspectratio="none" viewbox="0 0 100 100" width="100%">
-<defs>
-<pattern height="10" id="grid" patternunits="userSpaceOnUse" width="10">
-<path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"></path>
-</pattern>
-</defs>
-<rect fill="url(#grid)" height="100%" width="100%"></rect>
-</svg>
-</div>
-<!-- Top Brand -->
-<div class="relative z-10 flex items-center gap-3">
-<div class="w-10 h-10 bg-secondary-container rounded-xl flex items-center justify-center">
-<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
-</div>
-<h1 class="font-headline font-extrabold text-2xl tracking-tighter text-on-primary">Cognitive Sanctuary</h1>
-</div>
-<!-- Value Proposition Content -->
-<div class="relative z-10 max-w-lg">
-<h2 class="font-headline text-5xl font-bold text-on-primary leading-tight mb-8">
-                    The Smartest Way to <span class="text-secondary-fixed">Protect</span> Your Digital Mind.
-                </h2>
-<div class="space-y-8">
-<div class="flex gap-4">
-<div class="flex-shrink-0 w-12 h-12 bg-on-primary/10 rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-on-primary">verified_user</span>
-</div>
-<div>
-<p class="font-headline font-bold text-xl text-on-primary">Auth0 Secure Token Vault</p>
-<p class="text-on-primary-container mt-1">Enterprise-grade encryption for every student interaction, ensuring data privacy and academic integrity.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="flex-shrink-0 w-12 h-12 bg-on-primary/10 rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-on-primary">auto_awesome</span>
-</div>
-<div>
-<p class="font-headline font-bold text-xl text-on-primary">Cognitive Assistance</p>
-<p class="text-on-primary-container mt-1">AI-driven insights tailored to your learning pace, fostering deeper understanding rather than just answers.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Footer Image/Branding -->
-<div class="relative z-10">
-<div class="flex -space-x-4 mb-4">
-<img alt="User 1" class="w-12 h-12 rounded-full border-2 border-primary" data-alt="close-up portrait of a young professional student with a focused expression in a bright modern library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8mLY-mtugW5MYye8FwwKD9zP19OkyW9V6CJccmPKV7--8IKNC-kCvgrEBOQfmhV6ThO8860b9DeO-mMeg3NQfnWoWFUVo-Wz_nQ5Y80EDUvmRPE0jrM9s4VRi-B5JcM_8ZuKAkMNUWOQJlWz_ydj1OaoJUJQEmISFPYB04uMdJ_LB0IeRwMpPcrGPD43uPVnfxDEq75Tdn9dadcOZn9wS07VylB6mj-U7zwCSy4m9n8JBo2hZcRTzGG5vHLUgHOGs3I7Q1RIrBOy3"/>
-<img alt="User 2" class="w-12 h-12 rounded-full border-2 border-primary" data-alt="smiling professor in glasses against a background of soft bokeh classroom lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBKd83383iA2rhr5STWR73DvTrIoMjtjesGIm2C4-TK7bW-AoE9a4Ulw_ZR2GeTK1Q1Fw6D3qlBAwJPvGb3ZyHcYa6oajNvY8s3tpIwi0uXW1Ms4uF7yvr458VaafWR6XykIn1HkNVFaEqomBElXrW-MAQjtSLTrS04rAkcpAJPsajga8_umglB36ZO8e4sptpWgoxgPnWQDLtJJ4iVR8iHK2ZusgRE8X9VSihuiacZNJ3QLw0JrlfEVZFcybVZMAcN9D_9qTYwGBU"/>
-<img alt="User 3" class="w-12 h-12 rounded-full border-2 border-primary" data-alt="young designer with headphones working on a laptop in a sunlit creative workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWlWaqmtay27k2hho6irI5msv3vN5ZrCPn4b_iJuweaZ72HanGM-WDgAuM_aaT5BwHuMYYPx8xkOlaD776FbSYb31-dlerUvpaoviYc97RNpkCYfvjjN-9ET4wTRcKYcTgKYWKDZMRpbSTRzgg-Mrl_DEF0xSeNiXiC9CV4qZhTTBmMGeWXz9EGRzmEpTLWH7fqvkFsQ9wDSRGi5tLuoYjLJLq2buGDl7PIQb40BpX4uSmhtCQjFiSS0o4fpHILcIBgddom8hG34hM"/>
-<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center border-2 border-primary text-on-tertiary-fixed font-bold text-sm">+2k</div>
-</div>
-<p class="text-on-primary text-sm opacity-80">Trusted by over 2,000 students and educators worldwide.</p>
-</div>
-</section>
-<!-- Right Side: Auth Forms -->
-<section class="flex-1 flex items-center justify-center p-6 md:p-12 bg-surface">
-<div class="w-full max-w-[440px] space-y-8">
-<!-- Mobile Logo -->
-<div class="md:hidden flex flex-col items-center mb-8">
-<div class="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center mb-4">
-<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
-</div>
-<h1 class="font-headline font-extrabold text-2xl tracking-tighter text-primary">Cognitive Sanctuary</h1>
-</div>
-<div class="space-y-2">
-<h2 class="font-headline text-3xl font-bold text-on-surface">Welcome back</h2>
-<p class="text-on-surface-variant">Access your secure workspace and resume your journey.</p>
-</div>
-<!-- Social Login Buttons -->
-<div class="grid grid-cols-2 gap-4">
-<button class="flex items-center justify-center gap-3 px-4 py-3 bg-surface-container-low hover:bg-surface-container-high rounded-xl transition-all duration-200 group active:scale-95">
-<svg class="w-5 h-5" viewbox="0 0 24 24">
-<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
-<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
-<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
-<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="#EA4335"></path>
-</svg>
-<span class="font-semibold text-sm">Google</span>
-</button>
-<button class="flex items-center justify-center gap-3 px-4 py-3 bg-surface-container-low hover:bg-surface-container-high rounded-xl transition-all duration-200 group active:scale-95">
-<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"></path>
-</svg>
-<span class="font-semibold text-sm">GitHub</span>
-</button>
-</div>
-<div class="relative py-4">
-<div class="absolute inset-0 flex items-center">
-<div class="w-full border-t border-outline-variant opacity-30"></div>
-</div>
-<div class="relative flex justify-center text-xs uppercase">
-<span class="bg-surface px-4 text-outline font-medium tracking-widest">Or continue with</span>
-</div>
-</div>
-<!-- Form -->
-<form class="space-y-5">
-<div class="space-y-1.5">
-<label class="text-sm font-semibold text-on-surface ml-1" for="email">Email address</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-xl">mail</span>
-<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest rounded-xl text-on-surface placeholder:text-outline transition-all duration-200" id="email" placeholder="student@university.edu" type="email"/>
-</div>
-</div>
-<div class="space-y-1.5">
-<div class="flex justify-between items-center px-1">
-<label class="text-sm font-semibold text-on-surface" for="password">Password</label>
-<a class="text-xs font-bold text-primary hover:text-primary-container" href="#">Forgot password?</a>
-</div>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-xl">lock</span>
-<input class="w-full pl-12 pr-12 py-3 bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest rounded-xl text-on-surface placeholder:text-outline transition-all duration-200" id="password" placeholder="••••••••" type="password"/>
-<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors" type="button">
-<span class="material-symbols-outlined text-xl">visibility</span>
-</button>
-</div>
-</div>
-<button class="w-full py-4 auth-gradient text-on-primary font-headline font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" type="submit">
-                        Sign In to Sanctuary
-                    </button>
-</form>
-<div class="pt-6 text-center">
-<p class="text-on-surface-variant text-sm">
-                        Don't have an account yet? 
-                        <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4 ml-1" href="#">Create an account</a>
-</p>
-</div>
-<!-- Security Assurance -->
-<div class="mt-8 p-4 bg-secondary-container/30 rounded-xl flex items-start gap-3">
-<span class="material-symbols-outlined text-secondary mt-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
-<div class="text-xs text-on-secondary-fixed-variant leading-relaxed">
-<strong>Identity Verified:</strong> Your session is protected by Auth0 multi-factor authentication and 256-bit AES encryption.
+    <!-- Left Side: Branding & Value Prop -->
+    <section class="hidden md:flex md:w-1/2 relative flex-col justify-between p-16 auth-gradient overflow-hidden">
+        <!-- Background Decorative Pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg height="100%" preserveaspectratio="none" viewbox="0 0 100 100" width="100%">
+                <defs>
+                    <pattern height="10" id="grid" patternunits="userSpaceOnUse" width="10">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"></path>
+                    </pattern>
+                </defs>
+                <rect fill="url(#grid)" height="100%" width="100%"></rect>
+            </svg>
+        </div>
+        <!-- Top Brand -->
+        <div class="relative z-10 flex items-center gap-3">
+            <div class="w-10 h-10 bg-secondary-container rounded-xl flex items-center justify-center">
+                <span class="material-symbols-outlined text-on-secondary-container"
+                      style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+            </div>
+            <h1 class="font-headline font-extrabold text-2xl tracking-tighter text-on-primary">Cognitive Sanctuary</h1>
+        </div>
+        <!-- Value Proposition Content -->
+        <div class="relative z-10 max-w-lg">
+            <h2 class="font-headline text-5xl font-bold text-on-primary leading-tight mb-8">
+                The Smartest Way to <span class="text-secondary-fixed">Protect</span> Your Digital Mind.
+            </h2>
+            <div class="space-y-8">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-on-primary/10 rounded-full flex items-center justify-center">
+                        <span class="material-symbols-outlined text-on-primary">verified_user</span>
                     </div>
-</div>
-</div>
-</section>
+                    <div>
+                        <p class="font-headline font-bold text-xl text-on-primary">Auth0 Secure Token Vault</p>
+                        <p class="text-on-primary-container mt-1">Enterprise-grade encryption for every student
+                            interaction, ensuring data privacy and academic integrity.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-on-primary/10 rounded-full flex items-center justify-center">
+                        <span class="material-symbols-outlined text-on-primary">auto_awesome</span>
+                    </div>
+                    <div>
+                        <p class="font-headline font-bold text-xl text-on-primary">Cognitive Assistance</p>
+                        <p class="text-on-primary-container mt-1">AI-driven insights tailored to your learning pace,
+                            fostering deeper understanding rather than just answers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Image/Branding -->
+        <div class="relative z-10">
+            <div class="flex -space-x-4 mb-4">
+                <img alt="User 1" class="w-12 h-12 rounded-full border-2 border-primary"
+                     data-alt="close-up portrait of a young professional student with a focused expression in a bright modern library"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8mLY-mtugW5MYye8FwwKD9zP19OkyW9V6CJccmPKV7--8IKNC-kCvgrEBOQfmhV6ThO8860b9DeO-mMeg3NQfnWoWFUVo-Wz_nQ5Y80EDUvmRPE0jrM9s4VRi-B5JcM_8ZuKAkMNUWOQJlWz_ydj1OaoJUJQEmISFPYB04uMdJ_LB0IeRwMpPcrGPD43uPVnfxDEq75Tdn9dadcOZn9wS07VylB6mj-U7zwCSy4m9n8JBo2hZcRTzGG5vHLUgHOGs3I7Q1RIrBOy3"/>
+                <img alt="User 2" class="w-12 h-12 rounded-full border-2 border-primary"
+                     data-alt="smiling professor in glasses against a background of soft bokeh classroom lights"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBKd83383iA2rhr5STWR73DvTrIoMjtjesGIm2C4-TK7bW-AoE9a4Ulw_ZR2GeTK1Q1Fw6D3qlBAwJPvGb3ZyHcYa6oajNvY8s3tpIwi0uXW1Ms4uF7yvr458VaafWR6XykIn1HkNVFaEqomBElXrW-MAQjtSLTrS04rAkcpAJPsajga8_umglB36ZO8e4sptpWgoxgPnWQDLtJJ4iVR8iHK2ZusgRE8X9VSihuiacZNJ3QLw0JrlfEVZFcybVZMAcN9D_9qTYwGBU"/>
+                <img alt="User 3" class="w-12 h-12 rounded-full border-2 border-primary"
+                     data-alt="young designer with headphones working on a laptop in a sunlit creative workspace"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWlWaqmtay27k2hho6irI5msv3vN5ZrCPn4b_iJuweaZ72HanGM-WDgAuM_aaT5BwHuMYYPx8xkOlaD776FbSYb31-dlerUvpaoviYc97RNpkCYfvjjN-9ET4wTRcKYcTgKYWKDZMRpbSTRzgg-Mrl_DEF0xSeNiXiC9CV4qZhTTBmMGeWXz9EGRzmEpTLWH7fqvkFsQ9wDSRGi5tLuoYjLJLq2buGDl7PIQb40BpX4uSmhtCQjFiSS0o4fpHILcIBgddom8hG34hM"/>
+                <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center border-2 border-primary text-on-tertiary-fixed font-bold text-sm">
+                    +2k
+                </div>
+            </div>
+            <p class="text-on-primary text-sm opacity-80">Trusted by over 2,000 students and educators worldwide.</p>
+        </div>
+    </section>
+    <!-- Right Side: Auth Forms -->
+    <section class="flex-1 flex items-center justify-center p-6 md:p-12 bg-surface">
+        <div class="w-full max-w-[440px] space-y-8">
+            <!-- Mobile Logo -->
+            <div class="md:hidden flex flex-col items-center mb-8">
+                <div class="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+                </div>
+                <h1 class="font-headline font-extrabold text-2xl tracking-tighter text-primary">Cognitive Sanctuary</h1>
+            </div>
+            <div class="space-y-2">
+                <h2 class="font-headline text-3xl font-bold text-on-surface">Welcome back</h2>
+                <p class="text-on-surface-variant">Access your secure workspace and resume your journey.</p>
+            </div>
+            <!-- Social Login Buttons -->
+            <div class="grid grid-cols-2 gap-4">
+                <button class="flex items-center justify-center gap-3 px-4 py-3 bg-surface-container-low hover:bg-surface-container-high rounded-xl transition-all duration-200 group active:scale-95">
+                    <svg class="w-5 h-5" viewbox="0 0 24 24">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                              fill="#4285F4"></path>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                              fill="#34A853"></path>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                              fill="#FBBC05"></path>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z"
+                              fill="#EA4335"></path>
+                    </svg>
+                    <span class="font-semibold text-sm">Google</span>
+                </button>
+                <button class="flex items-center justify-center gap-3 px-4 py-3 bg-surface-container-low hover:bg-surface-container-high rounded-xl transition-all duration-200 group active:scale-95">
+                    <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"></path>
+                    </svg>
+                    <span class="font-semibold text-sm">GitHub</span>
+                </button>
+            </div>
+            <div class="relative py-4">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-outline-variant opacity-30"></div>
+                </div>
+                <div class="relative flex justify-center text-xs uppercase">
+                    <span class="bg-surface px-4 text-outline font-medium tracking-widest">Or continue with</span>
+                </div>
+            </div>
+            <!-- Form -->
+            <form class="space-y-5">
+                <div class="space-y-1.5">
+                    <label class="text-sm font-semibold text-on-surface ml-1" for="email">Email address</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-xl">mail</span>
+                        <input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest rounded-xl text-on-surface placeholder:text-outline transition-all duration-200"
+                               id="email" placeholder="student@university.edu" type="email"/>
+                    </div>
+                </div>
+                <div class="space-y-1.5">
+                    <div class="flex justify-between items-center px-1">
+                        <label class="text-sm font-semibold text-on-surface" for="password">Password</label>
+                        <a class="text-xs font-bold text-primary hover:text-primary-container" href="#">Forgot
+                            password?</a>
+                    </div>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-xl">lock</span>
+                        <input class="w-full pl-12 pr-12 py-3 bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest rounded-xl text-on-surface placeholder:text-outline transition-all duration-200"
+                               id="password" placeholder="••••••••" type="password"/>
+                        <button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors"
+                                type="button">
+                            <span class="material-symbols-outlined text-xl">visibility</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="w-full py-4 auth-gradient text-on-primary font-headline font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                        type="submit">
+                    Sign In to Sanctuary
+                </button>
+            </form>
+            <div class="pt-6 text-center">
+                <p class="text-on-surface-variant text-sm">
+                    Don't have an account yet?
+                    <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4 ml-1" href="#">Create
+                        an account</a>
+                </p>
+            </div>
+            <!-- Security Assurance -->
+            <div class="mt-8 p-4 bg-secondary-container/30 rounded-xl flex items-start gap-3">
+                <span class="material-symbols-outlined text-secondary mt-0.5"
+                      style="font-variation-settings: 'FILL' 1;">verified</span>
+                <div class="text-xs text-on-secondary-fixed-variant leading-relaxed">
+                    <strong>Identity Verified:</strong> Your session is protected by Auth0 multi-factor authentication
+                    and 256-bit AES encryption.
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <!-- Background Decoration for Desktop Asymmetry -->
 <div class="hidden lg:block fixed -bottom-24 -right-24 w-96 h-96 bg-tertiary-fixed/20 blur-[100px] rounded-full -z-10"></div>
 <div class="hidden lg:block fixed -top-24 -right-48 w-80 h-80 bg-primary/10 blur-[80px] rounded-full -z-10"></div>
-</body></html>
+</body>
+</html>
