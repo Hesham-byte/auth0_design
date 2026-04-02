@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Token Vault Configuration | Cognitive Sanctuary</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#71d7cd",
+              "primary": "#2b3896",
+              "on-primary-fixed-variant": "#303c9a",
+              "surface-dim": "#d8dadc",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#00504a",
+              "on-secondary-container": "#006f67",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#00201d",
+              "surface-container": "#eceef0",
+              "inverse-surface": "#2d3133",
+              "outline": "#757684",
+              "on-primary-container": "#cbcfff",
+              "surface-variant": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "surface": "#f8f9fb",
+              "primary-container": "#4551af",
+              "on-tertiary-fixed": "#281900",
+              "on-primary-fixed": "#000c62",
+              "error": "#ba1a1a",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary": "#006a63",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#eff1f3",
+              "surface-container-low": "#f2f4f6",
+              "inverse-primary": "#bcc2ff",
+              "secondary-fixed": "#8ef4e9",
+              "surface-bright": "#f8f9fb",
+              "on-tertiary-container": "#ffc971",
+              "background": "#f8f9fb",
+              "secondary-container": "#8bf1e6",
+              "primary-fixed-dim": "#bcc2ff",
+              "on-tertiary-fixed-variant": "#604100",
+              "tertiary-fixed-dim": "#ffba38",
+              "tertiary-container": "#795300",
+              "tertiary": "#5b3d00",
+              "primary-fixed": "#dfe0ff",
+              "on-error": "#ffffff",
+              "on-surface": "#191c1e",
+              "surface-tint": "#4955b3",
+              "on-surface-variant": "#454652",
+              "surface-container-high": "#e6e8ea",
+              "tertiary-fixed": "#ffdeac",
+              "outline-variant": "#c5c5d4",
+              "surface-container-highest": "#e0e3e5",
+              "on-background": "#191c1e"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-[#f8f9fb]/70 dark:bg-slate-950/70 backdrop-blur-xl flex justify-between items-center w-full px-8 py-4 max-w-full docked full-width top-0 sticky z-50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tight text-[#3F51B5] dark:text-white">Cognitive Sanctuary</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#3F51B5] transition-colors" href="#">History</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#3F51B5] transition-colors" href="#">Resources</a>
+<a class="text-[#3F51B5] dark:text-white font-bold border-b-2 border-[#3F51B5] pb-1" href="#">Vault</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#3F51B5] transition-colors" href="#">Users</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</button>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up professional headshot of a person with a kind expression and warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZLr9egt7VQ1k9QiARZG_GmLDRaOgye6j-9x5cKS3QCTh3C-ITGDx4uJJl8ecrL08S1dufRutygWeMbmLfEMxHyXh5JYadZ-NmPo9Hd9f2c2nSDaXV3COnGfUHLNGrCmuFXclvpAdSa7sERaU9cf-n7qv4EX0aUz6XGnwaMsN_joFFhUs_JJMnXXg_WNtDf1TV3VZzbIML4cYvfI_2lC6oxGv38HmnXMUPrUSaiVWKetCFyZOd2AEOxEzrOWVN7a6qG1AinP0jzJs7"/>
+</div>
+</header>
+<div class="flex">
+<!-- SideNavBar (Shared Component) -->
+<aside class="bg-[#f2f4f6] dark:bg-slate-900 h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col p-6 gap-4 z-40">
+<div class="mb-8 mt-16">
+<span class="text-lg font-black text-[#3F51B5]">System Console</span>
+<p class="text-xs text-slate-500 font-medium">Management Portal</p>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-medium">Sessions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-medium">Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-[#3F51B5] dark:text-white rounded-xl shadow-sm hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span class="font-medium">Security</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-medium">Admin</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-2 pt-4">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-medium">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 lg:ml-64 p-8 bg-surface min-h-[calc(100vh-80px)]">
+<div class="max-w-6xl mx-auto">
+<!-- Page Header -->
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Token Vault Configuration</h1>
+<p class="text-on-surface-variant max-w-xl">Manage cryptographic keys, OAuth2 integrations, and secure API endpoints for the Sanctuary's cognitive engine.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-3 rounded-xl font-bold hover:scale-[1.02] transition-transform flex items-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="autorenew">autorenew</span>
+                        Token Rotation
+                    </button>
+</div>
+<!-- Bento Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Auth0 Integration Panel -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-8 rounded-xl flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container/10 flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="hub">hub</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Auth0 Secure Gateway</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Auth0 Domain</label>
+<div class="bg-surface-container-low px-4 py-3 rounded-lg flex items-center justify-between group transition-colors focus-within:bg-surface-container-lowest focus-within:ring-2 ring-primary/20">
+<code class="text-sm font-medium">cognitive-sanctuary.us.auth0.com</code>
+<span class="material-symbols-outlined text-outline cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity" data-icon="content_copy">content_copy</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Client ID</label>
+<div class="bg-surface-container-low px-4 py-3 rounded-lg flex items-center justify-between group transition-colors focus-within:bg-surface-container-lowest focus-within:ring-2 ring-primary/20">
+<code class="text-sm font-medium">8Nf9y29v...P1sL0q9</code>
+<span class="material-symbols-outlined text-outline cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity" data-icon="content_copy">content_copy</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Public Key (JWKS)</label>
+<div class="bg-surface-container-low px-4 py-3 rounded-lg flex items-start justify-between group transition-colors focus-within:bg-surface-container-lowest focus-within:ring-2 ring-primary/20">
+<code class="text-xs font-medium text-on-surface-variant break-all">-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7zY8f...</code>
+<span class="material-symbols-outlined text-outline cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity" data-icon="visibility">visibility</span>
+</div>
+</div>
+</div>
+<!-- System Status Overlay -->
+<div class="lg:col-span-4 bg-secondary-container/30 p-8 rounded-xl backdrop-blur-sm border-l-4 border-secondary flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-on-secondary-container">Vault Health</h3>
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium opacity-80">Last Rotation</span>
+<span class="text-sm font-bold">14m ago</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium opacity-80">Encryption Type</span>
+<span class="text-sm font-bold">AES-256-GCM</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium opacity-80">Active Keys</span>
+<span class="text-sm font-bold">3 of 3</span>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-secondary/20">
+<p class="text-xs text-on-secondary-container leading-relaxed">
+                                Automatic rotation scheduled in <span class="font-bold underline">48 hours</span>. System telemetry shows no leaks.
+                            </p>
+</div>
+</div>
+<!-- Secure Endpoints Management -->
+<div class="lg:col-span-12 bg-surface-container-low p-8 rounded-xl">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-xl font-bold tracking-tight flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+                                Encrypted API Gateways
+                            </h2>
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container-highest px-3 py-1 rounded-full uppercase tracking-tighter">12 Active Enpoints</span>
+</div>
+<div class="space-y-4">
+<!-- Endpoint Row 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between hover:translate-x-1 transition-transform group">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline-variant uppercase">Provider</span>
+<span class="font-bold">WolframAlpha</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline-variant uppercase">Endpoint</span>
+<code class="text-sm text-primary font-medium">https://api.wolframalpha.com/v1/result</code>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full">
+<span class="material-symbols-outlined text-sm" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="text-xs font-bold uppercase tracking-wide">Encrypted</span>
+</div>
+<button class="p-2 text-outline-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="settings_ethernet">settings_ethernet</span>
+</button>
+</div>
+</div>
+<!-- Endpoint Row 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between hover:translate-x-1 transition-transform group">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline-variant uppercase">Provider</span>
+<span class="font-bold">OpenAI Gateway</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline-variant uppercase">Endpoint</span>
+<code class="text-sm text-primary font-medium">https://proxy.sanctuary.io/v1/chat/completions</code>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full">
+<span class="material-symbols-outlined text-sm" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="text-xs font-bold uppercase tracking-wide">Encrypted</span>
+</div>
+<button class="p-2 text-outline-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="settings_ethernet">settings_ethernet</span>
+</button>
+</div>
+</div>
+<!-- Endpoint Row 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between hover:translate-x-1 transition-transform group">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline-variant uppercase">Provider</span>
+<span class="font-bold">VectorDB Secure</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline-variant uppercase">Endpoint</span>
+<code class="text-sm text-primary font-medium">https://pinecone-secure-grpc.sanctuary-vpc.internal</code>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full">
+<span class="material-symbols-outlined text-sm" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="text-xs font-bold uppercase tracking-wide">Encrypted</span>
+</div>
+<button class="p-2 text-outline-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="settings_ethernet">settings_ethernet</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Security Activity Audit -->
+<div class="lg:col-span-12 flex flex-col gap-6">
+<div class="bg-surface-container-lowest p-8 rounded-xl">
+<h3 class="font-bold text-lg mb-6 headline">Vault Audit Log</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-2 h-2 rounded-full bg-tertiary mt-2"></div>
+<div>
+<p class="text-sm font-medium">System automatically rotated RSA-4096 key for Auth0 gateway.</p>
+<span class="text-xs text-outline-variant">Today, 2:45 PM</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-2 h-2 rounded-full bg-secondary mt-2"></div>
+<div>
+<p class="text-sm font-medium">New secure endpoint authorized: <span class="font-bold italic">https://api.scholar.edu/v2</span></p>
+<span class="text-xs text-outline-variant">Today, 11:12 AM</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+<div>
+<p class="text-sm font-medium">Admin session initiated from verified IP: <span class="font-bold italic">192.168.1.104</span></p>
+<span class="text-xs text-outline-variant">Today, 09:00 AM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Floating Action Button Contextual Suppression: Not rendered on Settings/Admin screen -->
+<footer class="lg:hidden fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-md px-4 py-3 flex justify-around items-center border-t border-outline/10 z-50">
+<a class="flex flex-col items-center gap-1 text-outline" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] font-bold">SESSIONS</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="text-[10px] font-bold">VAULT</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-outline" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-[10px] font-bold">ADMIN</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-outline" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-bold">CONFIG</span>
+</a>
+</footer>
+</body></html>

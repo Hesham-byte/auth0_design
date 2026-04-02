@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Console - Cognitive Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e6e8ea",
+              "on-surface-variant": "#454652",
+              "on-primary-container": "#cbcfff",
+              "on-error": "#ffffff",
+              "primary": "#2b3896",
+              "outline-variant": "#c5c5d4",
+              "on-secondary-fixed-variant": "#00504a",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "surface-container-highest": "#e0e3e5",
+              "error": "#ba1a1a",
+              "surface": "#f8f9fb",
+              "tertiary-container": "#795300",
+              "on-tertiary-fixed": "#281900",
+              "tertiary-fixed": "#ffdeac",
+              "surface-variant": "#e0e3e5",
+              "on-primary": "#ffffff",
+              "primary-container": "#4551af",
+              "inverse-on-surface": "#eff1f3",
+              "secondary": "#006a63",
+              "on-secondary-container": "#006f67",
+              "on-primary-fixed": "#000c62",
+              "secondary-container": "#8bf1e6",
+              "secondary-fixed": "#8ef4e9",
+              "surface-dim": "#d8dadc",
+              "surface-bright": "#f8f9fb",
+              "background": "#f8f9fb",
+              "on-secondary-fixed": "#00201d",
+              "primary-fixed": "#dfe0ff",
+              "inverse-primary": "#bcc2ff",
+              "outline": "#757684",
+              "on-secondary": "#ffffff",
+              "tertiary": "#5b3d00",
+              "on-tertiary-fixed-variant": "#604100",
+              "on-tertiary-container": "#ffc971",
+              "on-primary-fixed-variant": "#303c9a",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#71d7cd",
+              "tertiary-fixed-dim": "#ffba38",
+              "primary-fixed-dim": "#bcc2ff",
+              "surface-tint": "#4955b3",
+              "on-background": "#191c1e",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#eceef0",
+              "surface-container-low": "#f2f4f6",
+              "on-surface": "#191c1e"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fb; color: #191c1e; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="flex min-h-screen overflow-x-hidden">
+<!-- SideNavBar (Authority: JSON & Design System) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#f2f4f6] dark:bg-[#1f1f1f] flex flex-col p-4 gap-2 z-40 hidden md:flex">
+<div class="mb-8 px-2">
+<h1 class="font-headline font-extrabold text-[#2b3896] text-xl tracking-tight">Admin Console</h1>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Institutional View</p>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium text-sm">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-medium text-sm">Teacher Portal</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">person_search</span>
+<span class="font-medium text-sm">Student Insights</span>
+</a>
+<!-- Active Tab: API Monitor -->
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-[#2b3896] rounded-xl shadow-sm transition-all translate-x-1" href="#">
+<span class="material-symbols-outlined">api</span>
+<span class="font-medium text-sm">API Monitor</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">lock</span>
+<span class="font-medium text-sm">Vault</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-2">
+<button class="bg-gradient-to-br from-primary to-primary-container text-white py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-md">
+<span class="material-symbols-outlined text-sm">add</span>
+                New AI Model
+            </button>
+<div class="h-px bg-outline-variant/15 my-4"></div>
+<a class="flex items-center gap-3 px-4 py-2 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all text-sm" href="#">
+<span class="material-symbols-outlined">help</span>
+                Support
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all text-sm" href="#">
+<span class="material-symbols-outlined">history</span>
+                Logs
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 md:ml-64 min-h-screen bg-surface flex flex-col">
+<!-- TopNavBar (Authority: JSON) -->
+<header class="fixed top-0 right-0 left-0 md:left-64 z-50 bg-[#f8f9fb]/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 shadow-[0px_20px_40px_rgba(43,56,150,0.06)]">
+<div class="flex items-center gap-8">
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline">search</span>
+<input class="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-2 text-sm w-64 focus:ring-2 focus:ring-primary/30 transition-all" placeholder="Search infrastructure..." type="text"/>
+</div>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="font-headline font-bold text-[#2b3896] border-b-2 border-[#2b3896] pb-1 tracking-tight" href="#">Dashboard</a>
+<a class="font-headline font-bold text-[#5c5f62] hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02] tracking-tight" href="#">Analytics</a>
+<a class="font-headline font-bold text-[#5c5f62] hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02] tracking-tight" href="#">AI Config</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#5c5f62] hover:text-primary transition-all">notifications</button>
+<button class="material-symbols-outlined text-[#5c5f62] hover:text-primary transition-all">settings</button>
+<div class="h-8 w-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="professional portrait of a modern administrator in a minimalist style with neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA67PwE31OHzwTQHrBARnX7IYQxxgKWXM-FLHaig2_sqK_4PimW4iorRb5mZXFA5AvV7XjWa3RzCcXifUG7n3bcXSctuBP0ozD3i_5I_b2MymcbcN1nKeBpbeITLNX4CxngV1tzIDTfmLzLseOpPu9orK-xGAb7TXxdyjtn_YnvQjyBw6dRfEmwQVhj_HpkDi1mV4U_J54PfAqcDgUwdugBQAFx6XLc_WzArsS6_YHCNRdoZewj6WRTSXiJfI7SDJrQDm5ceQ2RYf-k"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="mt-20 p-8 space-y-8">
+<!-- Hero Selection -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight mb-2">API Node: OpenAI GPT-4</h2>
+<p class="text-on-surface-variant font-medium flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        Node Operational • Stable Latency (320ms)
+                    </p>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-1.5 rounded-xl">
+<button class="px-4 py-2 bg-white rounded-lg shadow-sm text-primary font-bold text-sm">OpenAI</button>
+<button class="px-4 py-2 text-on-surface-variant hover:bg-white/50 rounded-lg font-medium text-sm transition-all">Wolfram Alpha</button>
+<button class="px-4 py-2 text-on-surface-variant hover:bg-white/50 rounded-lg font-medium text-sm transition-all">Claude 3</button>
+</div>
+</div>
+<!-- Dashboard Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Performance Metrics -->
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(43,56,150,0.06)] group hover:scale-[1.01] transition-transform">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 bg-primary-fixed text-primary rounded-lg material-symbols-outlined">timer</span>
+<span class="text-secondary text-xs font-bold">+2.4%</span>
+</div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">Avg Latency</p>
+<p class="text-2xl font-headline font-extrabold text-primary">312ms</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(43,56,150,0.06)] group hover:scale-[1.01] transition-transform">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 bg-tertiary-fixed text-tertiary rounded-lg material-symbols-outlined">toll</span>
+<span class="text-error text-xs font-bold">-0.8%</span>
+</div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">Token Usage</p>
+<p class="text-2xl font-headline font-extrabold text-primary">1.2M</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(43,56,150,0.06)] group hover:scale-[1.01] transition-transform">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 bg-secondary-container text-on-secondary-container rounded-lg material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-secondary text-xs font-bold">Stable</span>
+</div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">Success Rate</p>
+<p class="text-2xl font-headline font-extrabold text-primary">99.98%</p>
+</div>
+</div>
+<!-- Model Configuration (Asymmetric Sidebar) -->
+<div class="md:col-span-4 row-span-2 bg-surface-container-low p-8 rounded-xl space-y-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">tune</span>
+<h3 class="font-headline font-extrabold text-lg tracking-tight">Model Config</h3>
+</div>
+<div class="space-y-6">
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest text-on-surface-variant">
+<span>Temperature</span>
+<span class="text-primary">0.7</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-outline-variant/30 rounded-full appearance-none" type="range"/>
+<p class="text-[10px] text-outline italic">Controls randomness: Lower is focused, higher is creative.</p>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest text-on-surface-variant">
+<span>Top P</span>
+<span class="text-primary">1.0</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-outline-variant/30 rounded-full appearance-none" type="range"/>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest text-on-surface-variant">
+<span>Frequency Penalty</span>
+<span class="text-primary">0.0</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-outline-variant/30 rounded-full appearance-none" type="range"/>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/15 space-y-4">
+<h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Advanced Overrides</h4>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative w-10 h-5 bg-outline-variant/30 rounded-full transition-colors group-hover:bg-primary/20">
+<div class="absolute left-1 top-1 w-3 h-3 bg-white rounded-full transition-transform"></div>
+</div>
+<span class="text-sm font-medium">Safe Mode Filtering</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative w-10 h-5 bg-primary rounded-full transition-colors">
+<div class="absolute right-1 top-1 w-3 h-3 bg-white rounded-full transition-transform"></div>
+</div>
+<span class="text-sm font-medium">Stream Responses</span>
+</label>
+</div>
+<button class="w-full py-3 bg-surface-container-highest text-on-surface font-bold rounded-xl hover:scale-[1.02] transition-transform">
+                        Update Configuration
+                    </button>
+</div>
+<!-- Detailed Analytics (Main Grid Area) -->
+<div class="md:col-span-8 bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_rgba(43,56,150,0.06)]">
+<div class="flex justify-between items-center mb-10">
+<h3 class="font-headline font-extrabold text-xl tracking-tight">Latency &amp; Load Analytics</h3>
+<select class="bg-surface-container-low border-none rounded-lg text-xs font-bold uppercase tracking-widest px-4 py-2 focus:ring-primary/20">
+<option>Last 24 Hours</option>
+<option>Last 7 Days</option>
+</select>
+</div>
+<!-- Decorative Chart Placeholder with Data Context -->
+<div class="h-64 flex items-end gap-2 px-4 relative">
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
+<div class="w-full h-px bg-outline-variant/10"></div>
+<div class="w-full h-px bg-outline-variant/10"></div>
+<div class="w-full h-px bg-outline-variant/10"></div>
+<div class="w-full h-px bg-outline-variant/10"></div>
+</div>
+<!-- Bar chart simulation -->
+<div class="flex-1 bg-primary/10 hover:bg-primary/30 transition-colors rounded-t-lg h-[40%] relative group">
+<div class="hidden group-hover:flex absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded">210ms</div>
+</div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 transition-colors rounded-t-lg h-[55%]"></div>
+<div class="flex-1 bg-primary/15 hover:bg-primary/35 transition-colors rounded-t-lg h-[45%]"></div>
+<div class="flex-1 bg-primary-container/40 hover:bg-primary-container/60 transition-colors rounded-t-lg h-[80%]"></div>
+<div class="flex-1 bg-primary/10 hover:bg-primary/30 transition-colors rounded-t-lg h-[35%]"></div>
+<div class="flex-1 bg-primary/25 hover:bg-primary/45 transition-colors rounded-t-lg h-[65%]"></div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 transition-colors rounded-t-lg h-[50%]"></div>
+<div class="flex-1 bg-primary/10 hover:bg-primary/30 transition-colors rounded-t-lg h-[42%]"></div>
+<div class="flex-1 bg-primary-container/50 hover:bg-primary-container/70 transition-colors rounded-t-lg h-[90%]"></div>
+<div class="flex-1 bg-primary/15 hover:bg-primary/35 transition-colors rounded-t-lg h-[48%]"></div>
+<div class="flex-1 bg-primary/10 hover:bg-primary/30 transition-colors rounded-t-lg h-[30%]"></div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 transition-colors rounded-t-lg h-[55%]"></div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-outline uppercase tracking-widest px-4">
+<span>08:00</span>
+<span>12:00</span>
+<span>16:00</span>
+<span>20:00</span>
+<span>00:00</span>
+</div>
+</div>
+<!-- API Key Management (Security Identity Section) -->
+<div class="md:col-span-12 bg-secondary-container p-8 rounded-xl flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+<div class="flex-1 space-y-2 z-10">
+<div class="flex items-center gap-2 text-on-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+<h3 class="font-headline font-extrabold text-xl tracking-tight">Secure Token Vault</h3>
+</div>
+<p class="text-on-secondary-container/80 text-sm font-medium">Manage your production API keys. Never share these credentials with unauthorized members.</p>
+</div>
+<div class="flex-1 w-full z-10">
+<div class="relative w-full group">
+<input class="w-full bg-white/50 border-none rounded-xl py-4 pl-6 pr-32 font-mono text-sm focus:ring-2 focus:ring-secondary/20" readonly="" type="password" value="sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"/>
+<div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-2">
+<button class="p-2 hover:bg-secondary/10 rounded-lg text-secondary transition-all material-symbols-outlined">visibility</button>
+<button class="p-2 hover:bg-secondary/10 rounded-lg text-secondary transition-all material-symbols-outlined">content_copy</button>
+<button class="px-4 py-2 bg-secondary text-white rounded-lg text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all">Rotate</button>
+</div>
+</div>
+</div>
+<!-- Decorative Security Pattern -->
+<div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[180px]">shield</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer (Authority: JSON) -->
+<footer class="w-full py-8 mt-auto border-t border-[#c5c5d4]/15 bg-[#f8f9fb] flex flex-col md:flex-row justify-between items-center px-12">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62]">© 2024 Cognitive Sanctuary. Securely encrypted.</p>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-all opacity-80 hover:opacity-100" href="#">Security Whitepaper</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-all opacity-80 hover:opacity-100" href="#">API Docs</a>
+</div>
+</footer>
+</main>
+</body></html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e6e8ea",
+              "on-surface-variant": "#454652",
+              "on-primary-container": "#cbcfff",
+              "on-error": "#ffffff",
+              "primary": "#2b3896",
+              "outline-variant": "#c5c5d4",
+              "on-secondary-fixed-variant": "#00504a",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "surface-container-highest": "#e0e3e5",
+              "error": "#ba1a1a",
+              "surface": "#f8f9fb",
+              "tertiary-container": "#795300",
+              "on-tertiary-fixed": "#281900",
+              "tertiary-fixed": "#ffdeac",
+              "surface-variant": "#e0e3e5",
+              "on-primary": "#ffffff",
+              "primary-container": "#4551af",
+              "inverse-on-surface": "#eff1f3",
+              "secondary": "#006a63",
+              "on-secondary-container": "#006f67",
+              "on-primary-fixed": "#000c62",
+              "secondary-container": "#8bf1e6",
+              "secondary-fixed": "#8ef4e9",
+              "surface-dim": "#d8dadc",
+              "surface-bright": "#f8f9fb",
+              "background": "#f8f9fb",
+              "on-secondary-fixed": "#00201d",
+              "primary-fixed": "#dfe0ff",
+              "inverse-primary": "#bcc2ff",
+              "outline": "#757684",
+              "on-secondary": "#ffffff",
+              "tertiary": "#5b3d00",
+              "on-tertiary-fixed-variant": "#604100",
+              "on-tertiary-container": "#ffc971",
+              "on-primary-fixed-variant": "#303c9a",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#71d7cd",
+              "tertiary-fixed-dim": "#ffba38",
+              "primary-fixed-dim": "#bcc2ff",
+              "surface-tint": "#4955b3",
+              "on-background": "#191c1e",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#eceef0",
+              "surface-container-low": "#f2f4f6",
+              "on-surface": "#191c1e"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Side Navigation Shell (The Anchor) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#f2f4f6] dark:bg-[#1f1f1f] flex flex-col p-4 gap-2 z-40">
+<div class="mb-8 px-2 pt-4">
+<h1 class="font-['Manrope'] font-extrabold text-[#2b3896] text-xl tracking-tighter">Admin Console</h1>
+<p class="text-xs text-on-surface-variant font-medium">Institutional View</p>
+</div>
+<nav class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] dark:hover:bg-[#2c2c2c] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-[#2b2b2b] text-[#2b3896] rounded-xl shadow-sm transition-all translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-['Inter'] text-sm font-medium">Teacher Portal</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] dark:hover:bg-[#2c2c2c] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="font-['Inter'] text-sm font-medium">Student Insights</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] dark:hover:bg-[#2c2c2c] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined" data-icon="api">api</span>
+<span class="font-['Inter'] text-sm font-medium">API Monitor</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] dark:hover:bg-[#2c2c2c] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span class="font-['Inter'] text-sm font-medium">Vault</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 flex flex-col gap-1 border-t border-outline-variant/15">
+<a class="flex items-center gap-3 px-4 py-2 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-sm">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-sm">Logs</span>
+</a>
+</div>
+</aside>
+<!-- Top App Bar -->
+<header class="fixed top-0 right-0 left-64 z-30 bg-[#f8f9fb]/70 dark:bg-[#191c1e]/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 shadow-[0px_20px_40px_rgba(43,56,150,0.06)]">
+<div class="flex items-center gap-8">
+<h2 class="font-headline font-bold text-xl tracking-tight text-primary">Institutional Analytics</h2>
+<div class="hidden md:flex gap-6">
+<a class="text-[#2b3896] dark:text-[#4551af] border-b-2 border-[#2b3896] pb-1 font-['Manrope'] font-bold text-sm" href="#">Dashboard</a>
+<a class="text-[#5c5f62] hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02] font-['Manrope'] font-bold text-sm" href="#">Analytics</a>
+<a class="text-[#5c5f62] hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02] font-['Manrope'] font-bold text-sm" href="#">AI Config</a>
+<a class="text-[#5c5f62] hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02] font-['Manrope'] font-bold text-sm" href="#">Help Center</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-2 mr-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-bold text-sm shadow-md hover:scale-[1.02] transition-transform active:scale-95">
+                Deploy AI
+            </button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 p-8 min-h-screen space-y-8">
+<!-- Executive Summary Bento Grid -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Average Academic Growth Radar -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(43,56,150,0.06)] relative overflow-hidden">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface">Average Academic Growth</h3>
+<p class="text-sm text-on-surface-variant">Across Institutional Domains</p>
+</div>
+<span class="text-tertiary bg-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold">+12.4%</span>
+</div>
+<!-- Radar Visualization Mock -->
+<div class="aspect-square flex items-center justify-center relative">
+<div class="absolute inset-0 border border-outline-variant/10 rounded-full scale-[0.2]"></div>
+<div class="absolute inset-0 border border-outline-variant/10 rounded-full scale-[0.4]"></div>
+<div class="absolute inset-0 border border-outline-variant/10 rounded-full scale-[0.6]"></div>
+<div class="absolute inset-0 border border-outline-variant/10 rounded-full scale-[0.8]"></div>
+<div class="absolute inset-0 border border-outline-variant/10 rounded-full scale-[1]"></div>
+<svg class="w-full h-full transform -rotate-90 drop-shadow-lg" viewbox="0 0 100 100">
+<polygon fill="rgba(43, 56, 150, 0.15)" points="50,15 85,35 75,75 25,75 15,35" stroke="#2b3896" stroke-width="2"></polygon>
+<circle cx="50" cy="15" fill="#2b3896" r="2"></circle>
+<circle cx="85" cy="35" fill="#2b3896" r="2"></circle>
+<circle cx="75" cy="75" fill="#2b3896" r="2"></circle>
+<circle cx="25" cy="75" fill="#2b3896" r="2"></circle>
+<circle cx="15" cy="35" fill="#2b3896" r="2"></circle>
+</svg>
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -mt-2 text-[10px] font-bold uppercase tracking-wider text-outline">Stem</div>
+<div class="absolute top-1/4 right-0 -mr-4 text-[10px] font-bold uppercase tracking-wider text-outline">Arts</div>
+<div class="absolute bottom-4 right-8 text-[10px] font-bold uppercase tracking-wider text-outline">Logic</div>
+<div class="absolute bottom-4 left-8 text-[10px] font-bold uppercase tracking-wider text-outline">Civics</div>
+<div class="absolute top-1/4 left-0 -ml-4 text-[10px] font-bold uppercase tracking-wider text-outline">Lang</div>
+</div>
+</div>
+<!-- Student Engagement Heatmap -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(43,56,150,0.06)] flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface">Student Engagement Over Time</h3>
+<p class="text-sm text-on-surface-variant">Weekly Interaction Heatmap</p>
+</div>
+<div class="flex gap-2">
+<span class="w-3 h-3 rounded-sm bg-surface-container-high"></span>
+<span class="w-3 h-3 rounded-sm bg-primary/20"></span>
+<span class="w-3 h-3 rounded-sm bg-primary/40"></span>
+<span class="w-3 h-3 rounded-sm bg-primary/70"></span>
+<span class="w-3 h-3 rounded-sm bg-primary"></span>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-24 gap-1 overflow-x-auto hide-scrollbar">
+<!-- Generating a simplified 24-column (hours) x 7-row (days) heatmap pattern -->
+<div class="flex flex-col gap-1 pr-2 text-[10px] font-bold text-outline">
+<span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+</div>
+<div class="flex-1 grid grid-cols-24 grid-rows-7 gap-1 min-w-[600px]">
+<!-- Repeating pattern of colored blocks for visual effect -->
+<div class="bg-surface-container-high rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary/80 rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary/80 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div>
+<!-- Row 2 -->
+<div class="bg-surface-container-high rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary/80 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/80 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div>
+<!-- Row 3 -->
+<div class="bg-primary/20 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary/80 rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary/80 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary/80 rounded-sm"></div><div class="bg-primary rounded-sm"></div><div class="bg-primary/80 rounded-sm"></div><div class="bg-primary/60 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-surface-container-high rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div><div class="bg-primary/40 rounded-sm"></div><div class="bg-primary/20 rounded-sm"></div>
+<!-- Row 4-7 omitted for brevity, adding static placeholders -->
+<div class="bg-primary/10 rounded-sm col-span-24 h-2 mt-1"></div>
+<div class="bg-primary/20 rounded-sm col-span-24 h-2 mt-1"></div>
+<div class="bg-primary/30 rounded-sm col-span-24 h-2 mt-1"></div>
+<div class="bg-primary/40 rounded-sm col-span-24 h-2 mt-1"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Metrics Layer -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Token Consumption Detailed View -->
+<div class="col-span-12 md:col-span-7 bg-surface-container-low p-8 rounded-xl relative overflow-hidden">
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface">Total Token Consumption</h3>
+<p class="text-on-surface-variant">Real-time inference load across campus</p>
+</div>
+<div class="text-right">
+<span class="text-4xl font-headline font-extrabold text-primary">8.4M</span>
+<p class="text-xs font-bold uppercase tracking-widest text-outline">Current Cycle</p>
+</div>
+</div>
+<div class="mt-auto space-y-4">
+<div class="flex justify-between text-xs font-bold uppercase">
+<span>Campus Capacity</span>
+<span>84% utilized</span>
+</div>
+<div class="h-4 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[84%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Abstract "Secure Vault" Identity Background Shape -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl"></div>
+</div>
+<!-- Top Active Subjects -->
+<div class="col-span-12 md:col-span-5 bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(43,56,150,0.06)]">
+<h3 class="font-headline font-bold text-lg mb-6 text-on-surface">Top Active Subjects</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="functions">functions</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between mb-1">
+<span class="font-bold text-sm">Advanced Calculus</span>
+<span class="text-xs font-bold text-outline">2.1k Active</span>
+</div>
+<div class="h-1.5 bg-surface-container-high rounded-full">
+<div class="h-full bg-primary w-[92%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between mb-1">
+<span class="font-bold text-sm">Genetics &amp; Ethics</span>
+<span class="text-xs font-bold text-outline">1.8k Active</span>
+</div>
+<div class="h-1.5 bg-surface-container-high rounded-full">
+<div class="h-full bg-secondary w-[78%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between mb-1">
+<span class="font-bold text-sm">Macroeconomics</span>
+<span class="text-xs font-bold text-outline">1.4k Active</span>
+</div>
+<div class="h-1.5 bg-surface-container-high rounded-full">
+<div class="h-full bg-tertiary-container w-[64%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Insights Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border-l-4 border-primary">
+<div class="flex items-center gap-3 mb-2 text-primary">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-xs font-bold uppercase tracking-wider">AI Insight</span>
+</div>
+<p class="text-sm text-on-surface leading-relaxed">Engagement in <span class="font-bold">Humanities</span> has increased by 40% after the "Socratic Dialogue" AI config was deployed.</p>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border-l-4 border-secondary">
+<div class="flex items-center gap-3 mb-2 text-secondary">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="text-xs font-bold uppercase tracking-wider">Secure Vault</span>
+</div>
+<p class="text-sm text-on-surface leading-relaxed">All institution tokens are currently <span class="font-bold">encrypted</span> and synced across 12 distributed nodes.</p>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border-l-4 border-tertiary-container">
+<div class="flex items-center gap-3 mb-2 text-tertiary-container">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="text-xs font-bold uppercase tracking-wider">Efficiency</span>
+</div>
+<p class="text-sm text-on-surface leading-relaxed">Token efficiency is up 12% following the <span class="font-bold">Context Compression</span> update.</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 mt-auto border-t border-[#c5c5d4]/15 bg-[#f8f9fb] dark:bg-[#191c1e] flex flex-col md:flex-row justify-between items-center px-12 z-10">
+<div class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62]">
+            © 2024 Cognitive Sanctuary. Securely encrypted.
+        </div>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-opacity opacity-80 hover:opacity-100" href="#">Security Whitepaper</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-opacity opacity-80 hover:opacity-100" href="#">API Docs</a>
+</div>
+</footer>
+</body></html>

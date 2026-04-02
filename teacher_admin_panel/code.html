@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Sanctuary | AI Homework Helper</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#8ef4e9",
+                        "on-surface": "#191c1e",
+                        "primary-container": "#4551af",
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#71d7cd",
+                        "on-primary-container": "#cbcfff",
+                        "surface-variant": "#e0e3e5",
+                        "surface-tint": "#4955b3",
+                        "tertiary": "#5b3d00",
+                        "tertiary-fixed-dim": "#ffba38",
+                        "on-tertiary-fixed": "#281900",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#bcc2ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "surface-container-low": "#f2f4f6",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dfe0ff",
+                        "on-secondary-fixed": "#00201d",
+                        "on-secondary-container": "#006f67",
+                        "inverse-surface": "#2d3133",
+                        "on-primary-fixed-variant": "#303c9a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#ffc971",
+                        "secondary-container": "#8bf1e6",
+                        "primary": "#2b3896",
+                        "on-primary-fixed": "#000c62",
+                        "tertiary-container": "#795300",
+                        "primary-fixed-dim": "#bcc2ff",
+                        "tertiary-fixed": "#ffdeac",
+                        "outline-variant": "#c5c5d4",
+                        "surface": "#f8f9fb",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#454652",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "outline": "#757684",
+                        "background": "#f8f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary": "#006a63",
+                        "surface-bright": "#f8f9fb"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<aside class="h-screen w-64 fixed left-0 top-0 hidden md:flex flex-col bg-slate-50 dark:bg-slate-950 p-4 space-y-2">
+<div class="px-2 py-6">
+<h1 class="text-lg font-bold text-indigo-900 dark:text-white mb-6">Admin Sanctuary</h1>
+<div class="flex items-center gap-3 mb-8 px-2">
+<img alt="User profile photo" class="w-10 h-10 rounded-full object-cover" data-alt="Professional portrait of a teacher in a bright modern office with soft natural lighting and blurred books in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG528gDU-kwuzQKf-qBJJU1jTWk32BXZuZ9ig1tHSjYJJmKnZ6PhrlTw_9frY4J0AVedaz1-XDXERD4utWlzGAWnECPDSaVegBActtFEFQnHjVPxMdYcSAvo7zHs35AHkGDIjmY4djV5i-BlW3vdRL7fWKL_1iFY1rLwMYaKtz9zfsd-rW6tMAzzlXvAJn78IRm2ZY7mqd5NIk6D6y7RZxwm9jdNFWvVFybzsIoCggUfvn3qjPGsfngG0bSvyn78WqegTMKRkAlwvo"/>
+<div>
+<p class="font-headline font-bold text-sm text-on-surface">Dr. Sarah Chen</p>
+<p class="text-xs text-on-surface-variant">Lead Educator</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-300 rounded-xl shadow-sm transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium text-sm">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 rounded-xl transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-medium text-sm">Engagement</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 rounded-xl transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span class="font-medium text-sm">Token Vault</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 rounded-xl transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="library_books">library_books</span>
+<span class="font-medium text-sm">Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 rounded-xl transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-medium text-sm">Students</span>
+</a>
+</nav>
+<div class="pt-4 mt-auto space-y-1 border-t border-surface-variant/20">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-medium text-sm">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-medium text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<main class="md:ml-64 min-h-screen p-8">
+<header class="mb-10 flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface mb-2">Institutional Dashboard</h2>
+<p class="text-on-surface-variant max-w-xl">Monitor student cognitive growth and manage AI-integrated research tools through the sanctuary control plane.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2.5 bg-surface-container-highest text-on-surface rounded-xl font-semibold flex items-center gap-2 hover:scale-102 transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="file_download">file_download</span>
+                    Export Data
+                </button>
+<button class="px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-semibold hover:scale-102 transition-all shadow-lg shadow-primary/10">
+                    New Session
+                </button>
+</div>
+</header>
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-3xl p-8 relative overflow-hidden">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="text-xl font-bold mb-1">Student Engagement Trends</h3>
+<p class="text-sm text-on-surface-variant">Daily activity and cognitive load analysis</p>
+</div>
+<div class="flex gap-2 bg-surface-container-low p-1 rounded-xl">
+<button class="px-3 py-1 bg-white text-xs font-bold rounded-lg shadow-sm">WEEK</button>
+<button class="px-3 py-1 text-xs font-bold text-on-surface-variant">MONTH</button>
+</div>
+</div>
+<div class="h-64 w-full flex items-end justify-between gap-2 px-2">
+<div class="w-full bg-primary/5 rounded-t-xl relative group h-[40%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-xl transition-all group-hover:bg-primary h-[70%]"></div>
+</div>
+<div class="w-full bg-primary/5 rounded-t-xl relative group h-[60%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-xl transition-all group-hover:bg-primary h-[85%]"></div>
+</div>
+<div class="w-full bg-primary/5 rounded-t-xl relative group h-[50%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-xl transition-all group-hover:bg-primary h-[60%]"></div>
+</div>
+<div class="w-full bg-primary/5 rounded-t-xl relative group h-[90%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-xl transition-all group-hover:bg-primary h-[95%]"></div>
+</div>
+<div class="w-full bg-primary/5 rounded-t-xl relative group h-[70%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-xl transition-all group-hover:bg-primary h-[40%]"></div>
+</div>
+<div class="w-full bg-primary/5 rounded-t-xl relative group h-[55%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-xl transition-all group-hover:bg-primary h-[80%]"></div>
+</div>
+<div class="w-full bg-primary/5 rounded-t-xl relative group h-[80%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-xl transition-all group-hover:bg-primary h-[75%]"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-on-surface-variant px-2">
+<span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+</div>
+</div>
+<div class="lg:col-span-4 bg-secondary-container rounded-3xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-on-secondary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</div>
+<h3 class="text-xl font-bold text-on-secondary-container">Secure Vault</h3>
+</div>
+<p class="text-on-secondary-container/80 text-sm mb-6 leading-relaxed">External AI services are currently operating under strict Auth0 protocols. 2 active sessions detected.</p>
+</div>
+<div class="space-y-3">
+<div class="bg-white/40 p-4 rounded-2xl flex justify-between items-center">
+<span class="text-sm font-bold text-on-secondary-container">Wolfram Alpha</span>
+<div class="w-10 h-5 bg-secondary rounded-full relative">
+<div class="absolute right-0.5 top-0.5 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="bg-white/40 p-4 rounded-2xl flex justify-between items-center">
+<span class="text-sm font-bold text-on-secondary-container">Khan Academy</span>
+<div class="w-10 h-5 bg-secondary rounded-full relative">
+<div class="absolute right-0.5 top-0.5 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="bg-on-secondary-container/10 p-4 rounded-2xl flex justify-between items-center">
+<span class="text-sm font-bold text-on-secondary-container opacity-50">Pythagoras AI</span>
+<div class="w-10 h-5 bg-on-secondary-container/20 rounded-full relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold">User Management</h3>
+<button class="text-primary font-bold text-sm hover:underline">View All Students</button>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant">
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider">Student</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider">Role</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider">Engagement</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-[10px] font-bold">JD</div>
+<span class="text-sm font-medium">Julian Donato</span>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Standard Student</td>
+<td class="px-6 py-4">
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%] rounded-full"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="more_horiz">more_horiz</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-[10px] font-bold">AK</div>
+<span class="text-sm font-medium">Aisha Khan</span>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Standard Student</td>
+<td class="px-6 py-4">
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[40%] rounded-full"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="more_horiz">more_horiz</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-[10px] font-bold">ML</div>
+<span class="text-sm font-medium">Marcus Low</span>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Standard Student</td>
+<td class="px-6 py-4">
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[95%] rounded-full"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="more_horiz">more_horiz</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold">Struggle Area Analysis</h3>
+<button class="text-primary font-bold text-sm hover:underline">Update Priorities</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-3xl border-l-4 border-error hover:scale-102 transition-all">
+<p class="text-xs font-bold text-error uppercase mb-2">High Friction</p>
+<h4 class="text-lg font-bold mb-4">Calculus: Limits &amp; Continuity</h4>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg" data-icon="trending_up">trending_up</span>
+<span>42% increase in queries</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl border-l-4 border-tertiary hover:scale-102 transition-all">
+<p class="text-xs font-bold text-tertiary-container uppercase mb-2">Medium Friction</p>
+<h4 class="text-lg font-bold mb-4">World History: Industrial Era</h4>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg" data-icon="trending_down">trending_down</span>
+<span>12% decrease in queries</span>
+</div>
+</div>
+<div class="col-span-2 bg-surface-container-lowest p-8 rounded-3xl">
+<h4 class="font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+                            Suggested Supplemental Materials
+                        </h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div>
+<p class="font-bold text-sm">The Delta-Epsilon Bridge</p>
+<p class="text-xs text-on-surface-variant">Visual Guide to Limits</p>
+</div>
+</div>
+<button class="px-4 py-2 border border-outline-variant rounded-full text-xs font-bold hover:bg-white transition-colors">Prioritize</button>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+</div>
+<div>
+<p class="font-bold text-sm">Interactive Timeline: 1848</p>
+<p class="text-xs text-on-surface-variant">Dynamic Data Exploration</p>
+</div>
+</div>
+<button class="px-4 py-2 border border-outline-variant rounded-full text-xs font-bold hover:bg-white transition-colors">Prioritize</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="md:ml-64 bg-slate-100 dark:bg-slate-900 w-full py-12 px-8 mt-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500">© 2024 Cognitive Sanctuary. Secured by Auth0 Token Vault.</p>
+<div class="flex gap-6">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-indigo-500 transition-opacity opacity-80" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-indigo-500 transition-opacity opacity-80" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-indigo-500 transition-opacity opacity-80" href="#">AI Ethics</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-indigo-500 transition-opacity opacity-80" href="#">Contact Support</a>
+</div>
+</footer>
+</body></html>

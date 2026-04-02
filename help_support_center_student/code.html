@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-high": "#e6e8ea",
+            "on-surface-variant": "#454652",
+            "on-primary-container": "#cbcfff",
+            "on-error": "#ffffff",
+            "primary": "#2b3896",
+            "outline-variant": "#c5c5d4",
+            "on-secondary-fixed-variant": "#00504a",
+            "on-error-container": "#93000a",
+            "surface-container-lowest": "#ffffff",
+            "inverse-surface": "#2d3133",
+            "surface-container-highest": "#e0e3e5",
+            "error": "#ba1a1a",
+            "surface": "#f8f9fb",
+            "tertiary-container": "#795300",
+            "on-tertiary-fixed": "#281900",
+            "tertiary-fixed": "#ffdeac",
+            "surface-variant": "#e0e3e5",
+            "on-primary": "#ffffff",
+            "primary-container": "#4551af",
+            "inverse-on-surface": "#eff1f3",
+            "secondary": "#006a63",
+            "on-secondary-container": "#006f67",
+            "on-primary-fixed": "#000c62",
+            "secondary-container": "#8bf1e6",
+            "secondary-fixed": "#8ef4e9",
+            "surface-dim": "#d8dadc",
+            "surface-bright": "#f8f9fb",
+            "background": "#f8f9fb",
+            "on-secondary-fixed": "#00201d",
+            "primary-fixed": "#dfe0ff",
+            "inverse-primary": "#bcc2ff",
+            "outline": "#757684",
+            "on-secondary": "#ffffff",
+            "tertiary": "#5b3d00",
+            "on-tertiary-fixed-variant": "#604100",
+            "on-tertiary-container": "#ffc971",
+            "on-primary-fixed-variant": "#303c9a",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#71d7cd",
+            "tertiary-fixed-dim": "#ffba38",
+            "primary-fixed-dim": "#bcc2ff",
+            "surface-tint": "#4955b3",
+            "on-background": "#191c1e",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#eceef0",
+            "surface-container-low": "#f2f4f6",
+            "on-surface": "#191c1e"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+    }
+    .primary-gradient {
+      background: linear-gradient(135deg, #2b3896 0%, #4551af 100%);
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #191c1e;
+      background-color: #f8f9fb;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#f8f9fb]/70 dark:bg-[#191c1e]/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(43,56,150,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#2b3896] dark:text-[#4551af] font-['Manrope']">Cognitive Sanctuary</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#5c5f62] dark:text-[#c5c5d4] font-['Manrope'] tracking-tight font-bold hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02]" href="#">Dashboard</a>
+<a class="text-[#5c5f62] dark:text-[#c5c5d4] font-['Manrope'] tracking-tight font-bold hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02]" href="#">Analytics</a>
+<a class="text-[#5c5f62] dark:text-[#c5c5d4] font-['Manrope'] tracking-tight font-bold hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02]" href="#">AI Config</a>
+<a class="text-[#2b3896] dark:text-[#4551af] border-b-2 border-[#2b3896] pb-1 font-['Manrope'] tracking-tight font-bold" href="#">Help Center</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:scale-110 transition-transform">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:scale-110 transition-transform">settings</button>
+<button class="primary-gradient text-white px-6 py-2 rounded-xl font-bold tracking-tight shadow-lg hover:scale-[1.02] transition-all active:scale-95">Deploy AI</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-16 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-primary mb-6 leading-tight">Your Digital Mentor Support Hub</h1>
+<p class="text-xl text-on-surface-variant font-body leading-relaxed max-w-xl mb-8">
+          Welcome to the Sanctuary. Learn how to partner with AI to expand your cognitive potential while maintaining the highest standards of academic integrity.
+        </p>
+<div class="flex flex-wrap gap-4">
+<button class="primary-gradient text-on-primary px-8 py-4 rounded-xl text-lg font-bold hover:scale-[1.02] transition-all shadow-xl">Start Learning</button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-xl text-lg font-bold hover:scale-[1.02] transition-all">View Tutorial</button>
+</div>
+</div>
+<div class="hidden md:block">
+<img alt="Student learning" class="rounded-[2rem] shadow-2xl object-cover h-[400px] w-full" data-alt="Modern workspace with a glowing laptop screen, soft ambient light, and a calm, focused student studying in a peaceful library environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2iUWalaaXxHFjTIKI_s7w88zf4RqsCb83tsxUKLvRRcc9AoO9coTkP3PAjFoEH4A2CmmmrDAELqMlgWvBb7dXCkAHglQIVom96_C0rDaMETTcAwRIlII8SNXNdvUjH10IG21VY-0mnjWoHsgoquwbwy4-WoK9WVCIrUuZN0bz-p0da25aRXSMWkfF90wdP5DYBENhfRPjgnQAWlEWtA-wOTEz2aUkENzQHxOyD6FZd6W5Dvk1hYvHAdDf7Wha97OgQlGoXdLa0We1"/>
+</div>
+</section>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+<!-- AI Ethics & Guidelines -->
+<div class="md:col-span-8 bg-surface-container-low p-8 rounded-[2rem] relative overflow-hidden group">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+<h2 class="text-3xl font-bold tracking-tight text-on-surface">AI Ethics &amp; Guidelines</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-8 relative z-10">
+<div class="space-y-4">
+<h3 class="text-xl font-bold text-secondary">The Human-First Policy</h3>
+<p class="text-on-surface-variant leading-relaxed">Cognitive Sanctuary is designed to augment, not replace, your thinking. Use AI to generate outlines, explain concepts, and debug code—but always provide the final creative spark.</p>
+</div>
+<div class="space-y-4">
+<h3 class="text-xl font-bold text-secondary">Integrity Protocols</h3>
+<p class="text-on-surface-variant leading-relaxed">Never submit AI-generated text as your own original work. Use our built-in citations tool to transparently acknowledge when AI assisted in your research process.</p>
+</div>
+</div>
+<!-- Subtle decorative element -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors"></div>
+</div>
+<!-- Secure Vault Status (Right Floating Column) -->
+<div class="md:col-span-4 bg-secondary-container p-8 rounded-[2rem] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="bg-on-secondary-container text-secondary-container text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-full">Encrypted</span>
+</div>
+<h2 class="text-2xl font-bold text-on-secondary-container mb-4 leading-tight">Secure Token Vault</h2>
+<p class="text-on-secondary-fixed-variant text-sm leading-relaxed mb-6">Your data is isolated and encrypted using enterprise-grade Auth0 protocols. No third-party AI training ever uses your personal academic data.</p>
+</div>
+<button class="w-full bg-on-secondary-container text-secondary-container py-3 rounded-xl font-bold hover:opacity-90 transition-opacity">Manage Data Privacy</button>
+</div>
+<!-- How to Write Better Prompts (Featured Wide Card) -->
+<div class="md:col-span-12 bg-surface-container-lowest p-10 rounded-[2rem] shadow-[0px_4px_24px_rgba(0,0,0,0.02)] border-l-4 border-primary">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2">
+<h2 class="text-4xl font-bold tracking-tight text-primary mb-6">Master the Art of Prompting</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold shrink-0">1</span>
+<div>
+<h4 class="font-bold text-on-surface">Provide Rich Context</h4>
+<p class="text-on-surface-variant text-sm">Tell the AI your grade level, the specific assignment goals, and the tone you want to achieve.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold shrink-0">2</span>
+<div>
+<h4 class="font-bold text-on-surface">Iterative Refinement</h4>
+<p class="text-on-surface-variant text-sm">Treat the AI like a study partner. Ask it to "Explain that like I'm 10" or "Now give me a counter-argument."</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold shrink-0">3</span>
+<div>
+<h4 class="font-bold text-on-surface">Define Constraints</h4>
+<p class="text-on-surface-variant text-sm">Ask for "bullet points only" or "limit the explanation to 100 words" to get concise answers.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 bg-surface-container-low rounded-2xl p-6">
+<div class="mb-4 text-xs font-bold uppercase tracking-widest text-outline">Example Interaction</div>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl rounded-tr-none ml-8 shadow-sm">
+<p class="text-sm font-medium italic">"I'm writing a paper on the French Revolution. Can you help me find three primary causes but explain them as if we're in a history debate?"</p>
+</div>
+<div class="bg-primary-container/10 p-4 rounded-xl rounded-tl-none mr-8 border-l-4 border-primary-container">
+<p class="text-sm text-primary-container font-bold mb-1">AI Mentor Insight</p>
+<p class="text-sm text-on-surface">"Challenge accepted! Let's examine the Socio-Economic divide, the Enlightenment ideals, and the Fiscal crisis from a 1789 perspective..."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Common Questions (FAQ) -->
+<div class="md:col-span-12">
+<h2 class="text-3xl font-bold tracking-tight text-center mb-10">Frequently Asked Questions</h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded-2xl hover:scale-[1.02] transition-transform">
+<h4 class="font-bold mb-3">Is using this cheating?</h4>
+<p class="text-sm text-on-surface-variant">Not if used correctly! Our tools focus on explaining 'how' and 'why', empowering you to do the actual work yourself.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl hover:scale-[1.02] transition-transform">
+<h4 class="font-bold mb-3">Can teachers see my data?</h4>
+<p class="text-sm text-on-surface-variant">Privacy is our priority. Your interactions are private unless you choose to export your 'Evidence of Learning' reports for credit.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl hover:scale-[1.02] transition-transform">
+<h4 class="font-bold mb-3">Does it cite sources?</h4>
+<p class="text-sm text-on-surface-variant">Yes! Every major factual claim includes a 'Source Check' that links to academic journals and verified databases.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Human Support CTA -->
+<section class="bg-inverse-surface text-inverse-on-surface rounded-[3rem] p-12 text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-4xl font-bold mb-6">Still have questions?</h2>
+<p class="text-outline-variant max-w-2xl mx-auto mb-10 text-lg">Our team of educators and AI ethicists are available 24/7 to help you navigate your digital learning journey.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2">
+<span class="material-symbols-outlined">support_agent</span>
+            Chat with a Human
+          </button>
+<button class="border border-outline-variant/30 text-inverse-on-surface px-10 py-4 rounded-full font-bold text-lg hover:bg-white/5 transition-colors">
+            Visit Knowledge Base
+          </button>
+</div>
+</div>
+<!-- Asymmetric Abstract Shapes -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2"></div>
+</section>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="w-full py-8 mt-auto bg-[#f8f9fb] dark:bg-[#191c1e] border-t border-[#c5c5d4]/15">
+<div class="flex flex-col md:flex-row justify-between items-center px-12">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] mb-4 md:mb-0">© 2024 Cognitive Sanctuary. Securely encrypted.</p>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-opacity opacity-80 hover:opacity-100" href="#">Security Whitepaper</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-opacity opacity-80 hover:opacity-100" href="#">API Docs</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StudySanctuary - AI Homework Helper Agent</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#8ef4e9",
+              "on-surface": "#191c1e",
+              "primary-container": "#4551af",
+              "on-background": "#191c1e",
+              "secondary-fixed-dim": "#71d7cd",
+              "on-primary-container": "#cbcfff",
+              "surface-variant": "#e0e3e5",
+              "surface-tint": "#4955b3",
+              "tertiary": "#5b3d00",
+              "tertiary-fixed-dim": "#ffba38",
+              "on-tertiary-fixed": "#281900",
+              "on-tertiary": "#ffffff",
+              "inverse-primary": "#bcc2ff",
+              "inverse-on-surface": "#eff1f3",
+              "on-tertiary-fixed-variant": "#604100",
+              "surface-container-low": "#f2f4f6",
+              "error-container": "#ffdad6",
+              "surface-dim": "#d8dadc",
+              "on-secondary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#dfe0ff",
+              "on-secondary-fixed": "#00201d",
+              "on-secondary-container": "#006f67",
+              "inverse-surface": "#2d3133",
+              "on-primary-fixed-variant": "#303c9a",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#ffc971",
+              "secondary-container": "#8bf1e6",
+              "primary": "#2b3896",
+              "on-primary-fixed": "#000c62",
+              "tertiary-container": "#795300",
+              "primary-fixed-dim": "#bcc2ff",
+              "tertiary-fixed": "#ffdeac",
+              "outline-variant": "#c5c5d4",
+              "surface": "#f8f9fb",
+              "surface-container-highest": "#e0e3e5",
+              "surface-container": "#eceef0",
+              "on-primary": "#ffffff",
+              "on-surface-variant": "#454652",
+              "on-secondary-fixed-variant": "#00504a",
+              "outline": "#757684",
+              "background": "#f8f9fb",
+              "surface-container-high": "#e6e8ea",
+              "secondary": "#006a63",
+              "surface-bright": "#f8f9fb"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2b3896 0%, #4551af 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl docked full-width top-0 sticky z-50 flex justify-between items-center px-8 h-16 w-full no-border-tonal-shift-bg-slate-100">
+<div class="text-xl font-extrabold tracking-tighter text-indigo-900 dark:text-white font-headline">
+            StudySanctuary
+        </div>
+<div class="hidden md:flex items-center space-x-8 font-['Manrope'] font-semibold tracking-tight">
+<a class="text-indigo-700 dark:text-indigo-300 border-b-2 border-indigo-600" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-all px-2 py-1 rounded-lg" href="#">AI Agent</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-all px-2 py-1 rounded-lg" href="#">History</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-all px-2 py-1 rounded-lg" href="#">Vault</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200/50 rounded-full transition-all">
+<span class="material-symbols-outlined text-slate-600">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-200/50 rounded-full transition-all">
+<span class="material-symbols-outlined text-slate-600">account_circle</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-20 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-secondary-container text-on-secondary-container rounded-full">
+                        Secure AI Learning
+                    </span>
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-6 leading-[1.1]">
+                        Learn Smarter, Study Securely with the <span class="text-primary">AI Agent</span>
+</h1>
+<p class="text-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+                        A powerful AI homework assistant protected by Auth0 Token Vault, ensuring a safe and focused learning environment for students.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="hero-gradient text-on-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                            Get Started for Free
+                        </button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform">
+                            Request a Demo for Teachers
+                        </button>
+</div>
+</div>
+<div class="relative">
+<!-- Asymmetrical Illustration Container -->
+<div class="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl">
+<img alt="AI Helping Student" class="w-full h-[500px] object-cover" data-alt="friendly small humanoid robot hovering next to a teenage student looking at a tablet in a bright modern workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgn72dAxnSZ4r-l9uBD1Lyjn4B9nNFB_0VSbL7p04afD5WjIIzPd_d7Z2yjtCI640XzDgKIeDfBhse9u_4owGZ1uh-W1jSUPIKVj-4oB0bwCE50jYA9lXW2GAevXaVbCRnPsslv2f9pZm_16jriJZerKU9uWTUNoYtPPR_BYB-jDB5pLFYz6BH93q4rizrE2JTNIHWvHj02PjPUAXimWF3evULR3I15DmZ4XlpUo018rtK3HyY3zWuCJNhNtFOW34P_qcMJPvhXS0x"/>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-tertiary-fixed rounded-full opacity-50 blur-2xl"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary-fixed rounded-full opacity-30 blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- How It Works (Bento Grid) -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-4xl font-bold text-on-surface mb-4">Master Every Subject</h2>
+<p class="text-on-surface-variant max-w-xl">Intelligent assistance that doesn't just give answers, but builds understanding.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-3xl flex flex-col justify-between group hover:shadow-xl transition-shadow border-none">
+<div>
+<div class="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">chat_bubble</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Chat with AI</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Experience fluid conversations with an AI that understands context. Ask about quantum physics or literary themes—it's like having a tutor available 24/7.</p>
+</div>
+<img alt="AI Chat Interface" class="rounded-2xl h-48 w-full object-cover" data-alt="clean dark mode UI showing a chat interface with glowing purple lines and stylized digital code floating in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtTic7DI0IkaZxCAO0VhUZ78JxPbhhq6d4P_NQElyAEThSR1hQADojJ8wSYUA0Iu_3aRH8ktoTk8ESUzRE-4MJ1lT-p9JBBSO4JY4lmwKEMYqRjfvLiQ1tw1xYWE192vl6XVXpT7gZ6FD7PmfEtw6P4WXy9j52295RxfAtH_xavSjy4apJWHHI5CQLCGBv5MklB7n59eGHSSV9tD65DRVdBaon_ZTORSJ81TJ3iO10240JILo3MQaEK1-3aGSZObT95pXsWfgAhLuy"/>
+</div>
+<!-- Feature 2 -->
+<div class="bg-primary p-10 rounded-3xl text-on-primary flex flex-col justify-between hover:scale-[1.02] transition-transform">
+<div>
+<div class="w-14 h-14 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-white text-3xl">account_tree</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Step-by-Step Solutions</h3>
+<p class="text-on-primary/80 leading-relaxed">Don't just see the result. Our AI breaks down complex problems into logical, easy-to-digest steps.</p>
+</div>
+<div class="pt-8 text-6xl font-black opacity-20">01-02-03</div>
+</div>
+<!-- Feature 3 -->
+<div class="bg-secondary p-10 rounded-3xl text-on-secondary flex flex-col justify-between md:col-span-1">
+<div class="w-14 h-14 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-white text-3xl">public</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4">External Knowledge</h3>
+<p class="text-on-secondary/80 leading-relaxed mb-6">Safely explore resources from Khan Academy and Wolfram Alpha without leaving the sanctuary.</p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="md:col-span-2 bg-surface-container-highest p-10 rounded-3xl flex items-center gap-8 border-none">
+<div class="flex-1">
+<h3 class="font-headline text-2xl font-bold mb-4">Focused Environment</h3>
+<p class="text-on-surface-variant leading-relaxed">A sanctuary designed for deep work, removing distractions and ensuring student safety.</p>
+</div>
+<div class="hidden sm:block w-1/3">
+<img alt="Quiet Study" class="rounded-2xl grayscale opacity-50" data-alt="overhead shot of a minimalist wooden desk with a notebook, pen, and soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlvJUyBZ1PiAhpFbsVODJDQvNt84f7U1g3vi1PaQVf5FekS_oNUdskEizkwCCbJnetghCO-1pVz5VfCa71xJvqT7cXv1-_Wa3i9FbB59SbpZ1QyiXcKcOsSSbmQlgBzrkiSBt-8RkpgdwmikbhE9nUw6uItrp2rh-uashDZWqRf0RyYwqTTrDLhZep1ePe7eQDFPVOUWnfRrbm87VYKGu56sKVw5C3cTSSO82jRSAyArxGeIFpnkvQGEDYQSEPKkEfvept84mav2oF"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Security First (Auth0 Section) -->
+<section class="py-24 bg-white overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="glass-panel p-8 rounded-[3rem] border border-outline-variant/20 relative z-10">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<span class="font-headline font-bold text-secondary">Auth0 Token Vault Active</span>
+</div>
+<div class="space-y-6">
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<div class="flex justify-between mb-2">
+<span class="text-sm font-bold opacity-50">API ENDPOINT</span>
+<span class="text-xs text-secondary font-mono">ENCRYPTED</span>
+</div>
+<code class="text-primary font-mono text-sm">request_token: auth0|student_v2_99x2...</code>
+</div>
+<p class="text-on-surface-variant text-sm italic">"Privacy isn't just a feature; it's our architecture. Every request to Wolfram Alpha or Khan Academy is anonymized and secured."</p>
+</div>
+</div>
+<!-- Background Glows -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-secondary-fixed/20 blur-[100px] -z-10"></div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface mb-6">Security First</h2>
+<h3 class="text-secondary font-bold text-xl mb-8">The Auth0 Token Vault Identity</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                            We take student privacy seriously. By utilizing the <strong>Auth0 Token Vault</strong>, we secure all API calls to external knowledge providers. Your personal data never leaves the sanctuary—only the questions do.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-medium">End-to-end encryption for every interaction</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-medium">Anonymized third-party API processing</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-medium">SOC2 compliant data handling</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Student & Teacher Roles -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h2 class="font-headline text-4xl font-bold mb-4">Designed for the Whole Classroom</h2>
+<p class="text-on-surface-variant">Tailored experiences that empower both learning and teaching.</p>
+</div>
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Student Role -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-12 hover:translate-y-[-8px] transition-transform shadow-sm">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mb-8 mx-auto">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4 text-center">For Students</h3>
+<p class="text-on-surface-variant text-center mb-8">A personal dashboard to track progress, access the Vault, and interact with the AI Mentor for focused study sessions.</p>
+<div class="space-y-3">
+<div class="bg-surface p-4 rounded-xl flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="text-sm font-semibold">Personalized Learning Paths</span>
+</div>
+<div class="bg-surface p-4 rounded-xl flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">history_edu</span>
+<span class="text-sm font-semibold">Complete Work History</span>
+</div>
+</div>
+</div>
+<!-- Teacher Role -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-12 hover:translate-y-[-8px] transition-transform shadow-sm">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-full flex items-center justify-center mb-8 mx-auto">
+<span class="material-symbols-outlined text-tertiary text-3xl">co_present</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4 text-center">For Teachers</h3>
+<p class="text-on-surface-variant text-center mb-8">A powerful management suite to monitor student engagement, set ethical AI guidelines, and review class-wide insights.</p>
+<div class="space-y-3">
+<div class="bg-surface p-4 rounded-xl flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">group</span>
+<span class="text-sm font-semibold">Classroom Analytics</span>
+</div>
+<div class="bg-surface p-4 rounded-xl flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">policy</span>
+<span class="text-sm font-semibold">AI Usage Guardrails</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-8 overflow-hidden">
+<div class="max-w-5xl mx-auto hero-gradient rounded-[3rem] p-12 md:p-20 text-center relative">
+<div class="relative z-10">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-white mb-6">Ready to enter the Sanctuary?</h2>
+<p class="text-on-primary-container text-lg mb-10 max-w-2xl mx-auto">Join thousands of students and educators redefining what it means to study with AI.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-white text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform">
+                            Get Started for Free
+                        </button>
+<button class="bg-primary-container text-white px-10 py-5 rounded-2xl font-bold text-lg border border-white/20 hover:scale-105 transition-transform">
+                            Request a Demo
+                        </button>
+</div>
+</div>
+<!-- Decorative Circle -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 w-full py-12 px-8 mt-auto flex flex-col md:flex-row justify-between items-center gap-4 tonal-shift-no-border">
+<div class="flex flex-col items-center md:items-start gap-2">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500">© 2024 Cognitive Sanctuary. Secured by Auth0 Token Vault.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-indigo-500 transition-all opacity-80-on-hover" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-indigo-500 transition-all opacity-80-on-hover" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-indigo-500 transition-all opacity-80-on-hover" href="#">AI Ethics</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-indigo-500 transition-all opacity-80-on-hover" href="#">Contact Support</a>
+</div>
+</footer>
+</body></html>

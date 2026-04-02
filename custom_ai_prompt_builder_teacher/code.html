@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-high": "#e6e8ea",
+            "on-surface-variant": "#454652",
+            "on-primary-container": "#cbcfff",
+            "on-error": "#ffffff",
+            "primary": "#2b3896",
+            "outline-variant": "#c5c5d4",
+            "on-secondary-fixed-variant": "#00504a",
+            "on-error-container": "#93000a",
+            "surface-container-lowest": "#ffffff",
+            "inverse-surface": "#2d3133",
+            "surface-container-highest": "#e0e3e5",
+            "error": "#ba1a1a",
+            "surface": "#f8f9fb",
+            "tertiary-container": "#795300",
+            "on-tertiary-fixed": "#281900",
+            "tertiary-fixed": "#ffdeac",
+            "surface-variant": "#e0e3e5",
+            "on-primary": "#ffffff",
+            "primary-container": "#4551af",
+            "inverse-on-surface": "#eff1f3",
+            "secondary": "#006a63",
+            "on-secondary-container": "#006f67",
+            "on-primary-fixed": "#000c62",
+            "secondary-container": "#8bf1e6",
+            "secondary-fixed": "#8ef4e9",
+            "surface-dim": "#d8dadc",
+            "surface-bright": "#f8f9fb",
+            "background": "#f8f9fb",
+            "on-secondary-fixed": "#00201d",
+            "primary-fixed": "#dfe0ff",
+            "inverse-primary": "#bcc2ff",
+            "outline": "#757684",
+            "on-secondary": "#ffffff",
+            "tertiary": "#5b3d00",
+            "on-tertiary-fixed-variant": "#604100",
+            "on-tertiary-container": "#ffc971",
+            "on-primary-fixed-variant": "#303c9a",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#71d7cd",
+            "tertiary-fixed-dim": "#ffba38",
+            "primary-fixed-dim": "#bcc2ff",
+            "surface-tint": "#4955b3",
+            "on-background": "#191c1e",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#eceef0",
+            "surface-container-low": "#f2f4f6",
+            "on-surface": "#191c1e"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+    }
+    .custom-gradient {
+      background: linear-gradient(135deg, #2b3896 0%, #4551af 100%);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-primary">
+<!-- Shared Component: TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8f9fb]/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(43,56,150,0.06)] flex justify-between items-center px-8 py-4 w-full max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#2b3896] font-headline">Cognitive Sanctuary</span>
+<div class="hidden md:flex gap-6 font-headline tracking-tight font-bold">
+<a class="text-[#5c5f62] hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02]" href="#">Dashboard</a>
+<a class="text-[#5c5f62] hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02]" href="#">Analytics</a>
+<a class="text-[#2b3896] border-b-2 border-[#2b3896] pb-1" href="#">AI Config</a>
+<a class="text-[#5c5f62] hover:text-[#2b3896] transition-transform duration-200 hover:scale-[1.02]" href="#">Help Center</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container rounded-full transition-colors">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container rounded-full transition-colors">settings</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-bold text-sm hover:scale-[1.02] active:scale-95 transition-all custom-gradient shadow-lg">Deploy AI</button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high border-2 border-white shadow-sm">
+<img alt="User avatar" data-alt="portrait of a professional educator in a bright modern office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApvfOikefT6CHFdPY9iDW2znGLbCPAOFXMDbsYLetr1ii5jaWs0QIhHMVN4nmU3f4mGdrpz-VsO_zu1U_74uJW3LkXLqsP1FXjta-Bfdr-MVZ_dNIAEjZ2UD2Y93aUMk83PAlq4Jgm2b5DYPxIqBwVD6kYuxuHGUmwrXXcYWM74hmYo49TCi_Ni5fPlzSre4YvwyLUXYlBj0sVwSgW1vlj8csxqqhI7OhjWw77ROkKliawLrjEfsUGkJwm6o8GkaNfQTZ1Ym8v2hc0"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar Anchor (Hidden on small screens) -->
+<aside class="hidden lg:flex h-screen w-64 fixed left-0 top-0 bg-[#f2f4f6] flex-col p-4 gap-2 pt-24">
+<div class="mb-8 px-2">
+<h2 class="font-headline font-extrabold text-[#2b3896] text-lg">Admin Console</h2>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Institutional View</p>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-[#2b3896] rounded-xl shadow-sm translate-x-1" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label text-sm font-medium">Teacher Portal</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">person_search</span>
+<span class="font-label text-sm font-medium">Student Insights</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">api</span>
+<span class="font-label text-sm font-medium">API Monitor</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">lock</span>
+<span class="font-label text-sm font-medium">Vault</span>
+</a>
+</div>
+<div class="mt-auto space-y-1 pt-4 border-t border-outline-variant/20">
+<button class="w-full flex items-center justify-center gap-2 bg-secondary text-on-secondary py-3 rounded-xl font-headline font-bold text-sm hover:opacity-90 transition-all mb-4">
+<span class="material-symbols-outlined text-sm">add</span>
+        New AI Model
+      </button>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label text-sm font-medium">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5c5f62] hover:bg-[#e0e3e5] rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label text-sm font-medium">Logs</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 pt-24 min-h-screen">
+<div class="max-w-7xl mx-auto px-8 py-8">
+<!-- Header Section -->
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-secondary font-headline font-bold text-sm uppercase tracking-widest bg-secondary-container/30 px-3 py-1 rounded-full">Persona Architect</span>
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold tracking-tighter text-on-surface mt-4">AI Agent Builder</h1>
+<p class="text-lg text-on-surface-variant mt-2 max-w-2xl font-body">Craft the perfect academic mentor. Define behavioral logic, security constraints, and knowledge boundaries for your classroom AI.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 bg-secondary-container px-4 py-2 rounded-xl text-on-secondary-container">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-xs font-bold uppercase tracking-wider">Vault Secured</span>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Column 1: Configuration (Large) -->
+<div class="lg:col-span-7 space-y-8">
+<!-- System Prompt Section -->
+<section class="bg-surface-container-low rounded-xl p-8 relative overflow-hidden group transition-all">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="font-headline font-bold text-xl">System Instructions</h3>
+</div>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-lg">lightbulb</span>
+                View Templates
+              </button>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-label font-bold text-on-surface-variant uppercase tracking-wider">The "Core Logic"</label>
+<div class="relative">
+<textarea class="w-full h-80 bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/30 rounded-xl p-6 font-body text-on-surface resize-none shadow-sm placeholder:text-outline" placeholder="You are a patient, encouraging mathematics tutor for 9th-grade students. Your goal is to guide them to the answer using the Socratic method rather than giving direct solutions...">You are a highly analytical Academic Mentor. 
+
+Guidelines:
+1. Speak to {{student_name}} with respect and clarity.
+2. Adjust the complexity based on {{subject_difficulty}}.
+3. If the user asks for a direct answer, pivot back to a conceptual hint.
+4. Ensure all responses align with the Cognitive Sanctuary safety protocols.</textarea>
+<div class="absolute bottom-4 right-4 flex gap-2">
+<span class="text-xs font-medium text-outline bg-surface-container px-2 py-1 rounded">1,242 Tokens</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Variable Injector -->
+<section class="bg-surface-container-low rounded-xl p-8">
+<h3 class="font-headline font-bold text-xl mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">dynamic_form</span>
+               Dynamic Variables
+            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Variable Item -->
+<button class="flex items-center justify-between bg-surface-container-lowest p-4 rounded-xl hover:scale-[1.02] transition-all group">
+<div class="flex items-center gap-3">
+<span class="text-secondary font-mono font-bold">{{student_name}}</span>
+<span class="text-xs text-on-surface-variant">Global Name</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary">add_circle</span>
+</button>
+<!-- Variable Item -->
+<button class="flex items-center justify-between bg-surface-container-lowest p-4 rounded-xl hover:scale-[1.02] transition-all group">
+<div class="flex items-center gap-3">
+<span class="text-secondary font-mono font-bold">{{subject_difficulty}}</span>
+<span class="text-xs text-on-surface-variant">Grade Level</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary">add_circle</span>
+</button>
+<!-- Variable Item -->
+<button class="flex items-center justify-between bg-surface-container-lowest p-4 rounded-xl hover:scale-[1.02] transition-all group">
+<div class="flex items-center justify-between gap-3">
+<span class="text-secondary font-mono font-bold">{{curriculum_id}}</span>
+<span class="text-xs text-on-surface-variant">Course Map</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary">add_circle</span>
+</button>
+<!-- Custom Variable -->
+<button class="flex items-center justify-center gap-2 border-2 border-dashed border-outline-variant p-4 rounded-xl hover:bg-surface-container-high transition-all text-on-surface-variant text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+                Create Variable
+              </button>
+</div>
+</section>
+</div>
+<!-- Column 2: Test Lab (Narrower) -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Test Lab Section -->
+<section class="bg-surface-container-highest rounded-xl p-8 h-full flex flex-col shadow-sm border-l-4 border-primary">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline font-bold text-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">science</span>
+                Test Lab
+              </h3>
+<div class="flex gap-2">
+<span class="w-3 h-3 rounded-full bg-error/40"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed/40"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container/40"></span>
+</div>
+</div>
+<!-- Input Area -->
+<div class="mb-8">
+<p class="text-xs font-bold uppercase text-on-surface-variant tracking-widest mb-3">Student Input Simulation</p>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+<textarea class="w-full bg-transparent border-none focus:ring-0 text-sm font-body text-on-surface resize-none" placeholder="Type a message to test the AI's logic..." rows="3">"I don't understand how to solve for X in this quadratic equation. Can you just give me the answer?"</textarea>
+</div>
+<button class="mt-4 w-full bg-primary text-on-primary py-3 rounded-xl font-headline font-bold text-sm custom-gradient flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+                Simulate Interaction
+              </button>
+</div>
+<!-- AI Response Area -->
+<div class="flex-grow">
+<p class="text-xs font-bold uppercase text-on-surface-variant tracking-widest mb-3">Persona Response Output</p>
+<div class="bg-white rounded-xl p-6 min-h-[300px] border border-outline-variant/15 relative">
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-white text-sm">smart_toy</span>
+</div>
+<div class="space-y-4">
+<div class="h-4 w-24 bg-surface-container rounded animate-pulse"></div>
+<div class="space-y-2">
+<p class="text-on-surface leading-relaxed text-sm">Hello <span class="bg-secondary-container/50 text-secondary px-1.5 py-0.5 rounded font-mono font-bold">Alex</span>, I'd be happy to help you with that quadratic equation! Rather than jumping straight to the solution, let's look at the <span class="border-b-2 border-tertiary-fixed">Standard Form</span> together.</p>
+<p class="text-on-surface leading-relaxed text-sm">What do you think is the first step when we have terms on both sides of the equal sign?</p>
+</div>
+</div>
+</div>
+<div class="absolute -left-1 top-20 w-1 h-24 bg-primary-container rounded-full"></div>
+</div>
+</div>
+<!-- Metrics -->
+<div class="mt-8 grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl text-center">
+<p class="text-[10px] uppercase font-bold text-outline">Tone Score</p>
+<p class="text-xl font-headline font-extrabold text-secondary">Encouraging</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl text-center">
+<p class="text-[10px] uppercase font-bold text-outline">Safety Compliance</p>
+<p class="text-xl font-headline font-extrabold text-secondary">100%</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Feature Card: Secure Vault Status -->
+<section class="mt-12 bg-secondary-container/20 rounded-xl p-8 border border-secondary/10 flex flex-col md:flex-row items-center gap-8">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-headline font-bold text-xl text-on-secondary-fixed-variant">Encrypted System Prompt Vault</h4>
+<p class="text-on-secondary-fixed-variant/80 max-w-2xl font-body mt-1">This persona configuration is stored in your private Auth0-secured vault. Only authenticated classroom agents can decrypt these system instructions during active sessions.</p>
+</div>
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-full font-headline font-bold whitespace-nowrap hover:bg-on-secondary-fixed-variant transition-all">
+          Manage Keys
+        </button>
+</section>
+</div>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="w-full py-8 mt-auto bg-[#f8f9fb] border-t border-[#c5c5d4]/15 flex flex-col md:flex-row justify-between items-center px-12">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62]">© 2024 Cognitive Sanctuary. Securely encrypted.</p>
+</div>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-all opacity-80 hover:opacity-100" href="#">Security Whitepaper</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#5c5f62] hover:text-[#3F51B5] transition-all opacity-80 hover:opacity-100" href="#">API Docs</a>
+</div>
+</footer>
+</body></html>

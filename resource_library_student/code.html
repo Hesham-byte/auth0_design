@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resource Library | Cognitive Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary-fixed": "#000c62",
+                "secondary-container": "#8bf1e6",
+                "secondary-fixed": "#8ef4e9",
+                "surface-dim": "#d8dadc",
+                "surface-bright": "#f8f9fb",
+                "primary-container": "#4551af",
+                "inverse-on-surface": "#eff1f3",
+                "secondary": "#006a63",
+                "on-secondary-container": "#006f67",
+                "surface": "#f8f9fb",
+                "tertiary-container": "#795300",
+                "on-tertiary-fixed": "#281900",
+                "tertiary-fixed": "#ffdeac",
+                "surface-variant": "#e0e3e5",
+                "on-primary": "#ffffff",
+                "surface-container-high": "#e6e8ea",
+                "on-surface-variant": "#454652",
+                "on-primary-container": "#cbcfff",
+                "on-error": "#ffffff",
+                "primary": "#2b3896",
+                "outline-variant": "#c5c5d4",
+                "on-secondary-fixed-variant": "#00504a",
+                "on-error-container": "#93000a",
+                "surface-container-lowest": "#ffffff",
+                "inverse-surface": "#2d3133",
+                "surface-container-highest": "#e0e3e5",
+                "error": "#ba1a1a",
+                "primary-fixed-dim": "#bcc2ff",
+                "surface-tint": "#4955b3",
+                "on-background": "#191c1e",
+                "on-tertiary": "#ffffff",
+                "surface-container": "#eceef0",
+                "surface-container-low": "#f2f4f6",
+                "on-surface": "#191c1e",
+                "secondary-fixed-dim": "#71d7cd",
+                "tertiary-fixed-dim": "#ffba38",
+                "outline": "#757684",
+                "on-secondary": "#ffffff",
+                "tertiary": "#5b3d00",
+                "on-tertiary-fixed-variant": "#604100",
+                "on-tertiary-container": "#ffc971",
+                "on-primary-fixed-variant": "#303c9a",
+                "error-container": "#ffdad6",
+                "background": "#f8f9fb",
+                "on-secondary-fixed": "#00201d",
+                "primary-fixed": "#dfe0ff",
+                "inverse-primary": "#bcc2ff"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/70 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-indigo-900">Cognitive Sanctuary</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-indigo-700 font-bold border-b-2 border-indigo-600 transition-colors py-1" href="#">Library</a>
+<a class="text-slate-500 font-medium hover:text-indigo-600 transition-colors py-1" href="#">Activity</a>
+<a class="text-slate-500 font-medium hover:text-indigo-600 transition-colors py-1" href="#">Reports</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:text-indigo-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="shield_lock">shield_lock</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-indigo-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl font-semibold active:scale-95 duration-150 transition-all shadow-sm">Sign Out</button>
+</div>
+</div>
+</header>
+<div class="flex pt-20">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 bg-slate-50 border-r-0 hidden lg:flex flex-col p-6 pt-24">
+<div class="flex items-center gap-3 mb-10 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="book_5">book_5</span>
+</div>
+<div>
+<div class="text-xl font-extrabold text-indigo-900 leading-none">The Sanctuary</div>
+<div class="text-xs text-slate-500 font-medium">Secure Workspace</div>
+</div>
+</div>
+<nav class="space-y-2 flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 bg-indigo-50 text-indigo-800 rounded-xl font-semibold active:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="book_5">book_5</span>
+<span>Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-xl font-semibold active:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span>Security Vault</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-xl font-semibold active:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Student Progress</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-xl font-semibold active:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Help Center</span>
+</a>
+</nav>
+<button class="mt-8 mb-10 w-full py-4 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold shadow-lg transform hover:scale-[1.02] active:scale-95 transition-all">
+                New Request
+            </button>
+<div class="pt-6 space-y-4 border-t-0">
+<a class="flex items-center gap-3 px-4 text-sm text-slate-600 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+<span>Privacy</span>
+</a>
+<a class="flex items-center gap-3 px-4 text-sm text-slate-600 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+<span>Terms</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-grow lg:ml-72 min-h-screen px-8 pb-20">
+<div class="max-w-6xl mx-auto pt-10">
+<!-- Editorial Header -->
+<header class="mb-12">
+<h1 class="text-5xl font-extrabold tracking-tight text-on-surface mb-2">Knowledge Library</h1>
+<p class="text-on-surface-variant text-lg">Curated materials from your mentors to deepen your understanding.</p>
+</header>
+<!-- Search and Filter Bar (Asymmetric Layout) -->
+<div class="flex flex-col md:flex-row gap-6 mb-12 items-end">
+<div class="w-full md:flex-grow">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 block px-2">Search Materials</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full pl-12 pr-6 py-4 bg-surface-container-low border-0 rounded-2xl focus:ring-0 focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-slate-400" placeholder="Topics, teachers, or file names..." type="text"/>
+</div>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 md:pb-0 scrollbar-hide">
+<button class="px-6 py-4 rounded-2xl bg-primary text-on-primary font-bold shadow-md whitespace-nowrap">All Subjects</button>
+<button class="px-6 py-4 rounded-2xl bg-surface-container-low text-slate-600 hover:bg-surface-container-high transition-all font-semibold whitespace-nowrap">Mathematics</button>
+<button class="px-6 py-4 rounded-2xl bg-surface-container-low text-slate-600 hover:bg-surface-container-high transition-all font-semibold whitespace-nowrap">Quantum Physics</button>
+<button class="px-6 py-4 rounded-2xl bg-surface-container-low text-slate-600 hover:bg-surface-container-high transition-all font-semibold whitespace-nowrap">History</button>
+</div>
+</div>
+<!-- Bento Grid Layout for Resources -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Featured PDF -->
+<div class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+<div class="aspect-video relative overflow-hidden">
+<img alt="abstract geometry" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="abstract geometric blueprint of a bridge structure with architectural sketches and measuring tools in soft blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbLjxwa5awOkIhAvwTDhJ1eQY17J462a7BxR6lxsHWSmfm_GC5yj95DqJtAKzPsK1v0NEIBbiPQiCw5zuLNQ_tQAognU_gD-FCyAfA-iL-0e60bNjP600mvLFo6jIq145Er_Fe8zjDaXDjU4cQft_Wp0T72mgZwxqbD6Ptm6kMUctgWBQHuN7aVX1u-2HLWZbyqAP5ITuyLW5IR0JPKBY-yyzx1-E6oRl1uT0Sp7klxJD4DB_0y9A7H8bds7iq88vnsKrOSvNbIKrZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-indigo-900/60 to-transparent"></div>
+<div class="absolute top-4 left-4 glass-panel px-3 py-1.5 rounded-full flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]" data-icon="picture_as_pdf">picture_as_pdf</span>
+                                PDF Document
+                            </div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="text-2xl font-bold text-indigo-950 mb-3 leading-tight">Advanced Calculus: The Derivative Explained</h3>
+<div class="flex items-center gap-3 mb-6">
+<img alt="Professor portrait" class="w-8 h-8 rounded-full border-2 border-primary/10" data-alt="close-up portrait of a senior professor with glasses in a library setting with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAVrO09rqg4MFYqkuyanDdOuGeJ-wSSJPweC_o7tsqpOulxcEbMokv6_2_LGc8i1q9-LKW6q7SIxeSaxY730bVUEfgRSIt2Dz3MPqnuk8CMBkNv-a-kgC9uS13IxPyOZ0AOZ63c4AuMsD0rwDMHJaFDeEpnES5ZQ8xo232nc90nPlGpPQZxXIfsn58ic8n2-z3EZrqNHAWZi6GXtFXAeoJcrCtskS1OBWxun5uIpFj7CvYxXcfoAVgiA_PFHNijH8vDJYAueV3jq8M"/>
+<span class="text-slate-500 text-sm font-medium">Dr. Julian Vance</span>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs text-slate-400 font-semibold tracking-wide">3.2 MB • 12 Pages</span>
+<button class="px-6 py-2.5 rounded-xl bg-secondary text-white font-bold hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-95">Access</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Video Lesson (Asymmetric height feel) -->
+<div class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+<div class="aspect-video relative overflow-hidden">
+<img alt="coding screen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="blurred code on a high-resolution monitor with purple and blue glowing lights reflecting on a glass table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD8QSGlLbfY_f_GGpgp8-EVRuLdfmyvkX2cMey4ETwhXPZL5wnay2g7Pm_8huqJgEQ24vz_maXB79Tx_Hm8fZv2gbHBKNaBLtBdMQ_d-k8W8eJBlRcxSzzhjzAuwUhno1aWM5CRMY_p2JVmnTQV5wU6zfAIxjvV-ia4AjRl8aPEA3jtYnduQ__pRn2LOiVDRod4IxjfiiCJE3lNXAnX6ZVms6Ne_M1SZmO-9B1mwS2qOykJSF9TeZ-txSgKolm3PpRQZBlvB_HP5fz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-indigo-900/60 to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-14 h-14 rounded-full glass-panel flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute top-4 left-4 glass-panel px-3 py-1.5 rounded-full flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]" data-icon="videocam">videocam</span>
+                                Video Lesson
+                            </div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="text-2xl font-bold text-indigo-950 mb-3 leading-tight">Mastering React Hooks &amp; States</h3>
+<div class="flex items-center gap-3 mb-6">
+<img alt="Tech Mentor" class="w-8 h-8 rounded-full border-2 border-primary/10" data-alt="portrait of a young female tech instructor with headphones in a modern bright studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt6XxBTCrT8t7zxPIp9RQo_-RZzFD3rUxCljB8BMxy825uwjmGkpZ7gpWqorY__zAl8NW5_4tNGT1kO5IJXwau-6byJ0yvXuw9zYxJh2nw-0FPJF5-iFLIXkfRE48W6WQCQ8c3h76ei8_i0E1Oa_U9lb9PNUbmJFex8NuYOYbeXsZAYW3E-BK3gN80P89GIt-OaWtOZkdWO6BMnbuEAntmbVxOGnnPfAWCEUWV0I11f-P1xywU782BuuvqwYTWZbp9OaFcAxIHqbfy"/>
+<span class="text-slate-500 text-sm font-medium">Sarah Chen</span>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs text-slate-400 font-semibold tracking-wide">15:42 • High Res</span>
+<button class="px-6 py-2.5 rounded-xl bg-secondary text-white font-bold hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-95">Watch</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Interactive Link -->
+<div class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+<div class="aspect-video relative overflow-hidden">
+<img alt="lab equipment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="microscopic view of chemical crystallization with vibrant iridescent colors and sharp crystal structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPBvOn2rVNF4xe3_Of6868mgj55C3vCH7pZ0fqMvMkvoRstoSYPa63v-tjFGFqvlhTFrIiNH1gpa705d_dNLGKo1h-CB48UZxviDcOayRFxTOWjregvX2T10xBO7ouIkU1rnRSphrj7ZB1pFdCvcxGNBhz2KZRNwYyXkcdwClDYKUP5GqaMT9GJ35HwggKUEAe4xqpxXkToYIF_xIeh79WijzwFEPG_dq82rrCp1Pe7oTbTffQYbKJI97Nkdc71kWhahm9JqgvRBPf"/>
+<div class="absolute inset-0 bg-gradient-to-t from-indigo-900/60 to-transparent"></div>
+<div class="absolute top-4 left-4 glass-panel px-3 py-1.5 rounded-full flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]" data-icon="link">link</span>
+                                Interactive Lab
+                            </div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="text-2xl font-bold text-indigo-950 mb-3 leading-tight">Virtual Chemistry: Bonding Lab</h3>
+<div class="flex items-center gap-3 mb-6">
+<img alt="Science Mentor" class="w-8 h-8 rounded-full border-2 border-primary/10" data-alt="close-up portrait of a male scientist in a white coat with a clean clinical background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb9bTWWc8lIcuMemZY2rd6C6MsYbnBJUcg4moUFxKkhuJvffbuoZ7nEy297nIFbEY3DWfHqAYsvQ_IhxuScGNAL5dRgjg3IaFyncGNooW81ZtWH4PjMwyER7dB-wAZil5Q2ppJOYdH1KGA_pcGfTQML4zc8CVCc1I1IeLeMjkE3uFKSe6qpDpzfwFo1Pm-eTIL8Athaf6lGTSwDm9HZquN3slk7M_sRs0X1JKb1-pVMOeKbz6jNJgGZjTTaCbvMp690c6Xy4PovkSt"/>
+<span class="text-slate-500 text-sm font-medium">Dr. Aris Thorne</span>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs text-slate-400 font-semibold tracking-wide">Web App • Simulation</span>
+<button class="px-6 py-2.5 rounded-xl bg-secondary text-white font-bold hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-95">Open Lab</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Study Guide (Large/Hero focus in grid) -->
+<div class="group md:col-span-2 relative bg-indigo-900 rounded-[2rem] overflow-hidden shadow-xl flex flex-col md:flex-row min-h-[320px]">
+<div class="md:w-2/5 relative">
+<img alt="ancient books" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="detailed close-up of aged leather-bound books and ink quills on a dark mahogany desk with warm candlelight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkfgJXe4V8tj2qZo7cnnl4zRdR-XP-JKCIWYhZL1eWtlHlgsO-5JRrGhWg5KKETHj3wiZR-y_3jD7ObgQnE3um3LmZvXZFuHiOZwaIfhFeTKdEpiqIVJuOMhzHAEoDOA5_7WLO19YnIZlabGtGZq8h-m6wBMtENiJwexfd9b7hV6xM1f4i2C7ClW53gjDFMYTfEGbqv7Iu1Z91FiUlNturue3q872vaV46KbbUQTj8-h9d3ASO52zcTA3EU3mkdX4PzNRLYwzzxvZF"/>
+</div>
+<div class="md:w-3/5 p-10 flex flex-col justify-center text-on-primary">
+<div class="inline-flex items-center gap-2 text-tertiary-fixed font-bold text-xs uppercase tracking-[0.2em] mb-4">
+<span class="material-symbols-outlined text-[18px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                Featured Content
+                            </div>
+<h3 class="text-4xl font-extrabold mb-4 leading-tight">The Enlightenment Era: Comprehensive Guide</h3>
+<p class="text-indigo-200 mb-8 max-w-md">A deep dive into the 18th-century philosophy and scientific shifts. Required reading for the Midterm.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-indigo-700 flex items-center justify-center text-lg font-bold">EM</div>
+<span class="font-medium">Elena Martinez</span>
+</div>
+<button class="px-8 py-3.5 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed font-bold shadow-lg hover:bg-white hover:text-indigo-900 transition-all active:scale-95">Start Learning</button>
+</div>
+</div>
+</div>
+<!-- Card 5: Security Asset -->
+<div class="group relative bg-secondary-container/30 border-2 border-secondary-container/10 rounded-[2rem] overflow-hidden flex flex-col h-full">
+<div class="p-8 flex flex-col h-full">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-2xl" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<h3 class="text-2xl font-bold text-indigo-950 mb-3 leading-tight">Exam Protocol &amp; Ethics 2024</h3>
+<p class="text-on-surface-variant mb-8 text-sm">Essential security guidelines for the upcoming digital finals. Verified by the Vault.</p>
+<div class="mt-auto pt-6 flex items-center justify-between border-t border-secondary-container/20">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Secure Access</span>
+<button class="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center hover:shadow-lg transition-shadow">
+<span class="material-symbols-outlined" data-icon="lock_open">lock_open</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Asymmetry/Breathing Room -->
+<div class="mt-20 py-12 flex flex-col md:flex-row justify-between items-center gap-8 border-t-0 bg-surface-container-low rounded-[3rem] px-12">
+<div>
+<h4 class="text-xl font-bold text-indigo-900 mb-2">Can't find a specific resource?</h4>
+<p class="text-slate-500">Submit a request to your mentor for specific supplemental materials.</p>
+</div>
+<button class="px-8 py-4 bg-white text-primary font-bold rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:bg-slate-50 transition-all">
+                        Request Material
+                    </button>
+</div>
+</div>
+</main>
+</div>
+<!-- Security Vault Status (Floating Right Panel) -->
+<div class="fixed bottom-8 right-8 z-[60] flex flex-col items-end pointer-events-none">
+<div class="pointer-events-auto bg-white/80 backdrop-blur-xl border border-slate-100 p-4 rounded-3xl shadow-2xl flex items-center gap-4 max-w-xs group cursor-pointer hover:translate-y-[-4px] transition-all">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="shield_person">shield_person</span>
+</div>
+<div class="pr-4">
+<div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Vault Status</div>
+<div class="text-sm font-bold text-indigo-900">Session Securely Encrypted</div>
+</div>
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+</div>
+</div>
+</body></html>

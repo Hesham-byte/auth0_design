@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Progress Report | Cognitive Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#000c62",
+              "secondary-container": "#8bf1e6",
+              "secondary-fixed": "#8ef4e9",
+              "surface-dim": "#d8dadc",
+              "surface-bright": "#f8f9fb",
+              "primary-container": "#4551af",
+              "inverse-on-surface": "#eff1f3",
+              "secondary": "#006a63",
+              "on-secondary-container": "#006f67",
+              "surface": "#f8f9fb",
+              "tertiary-container": "#795300",
+              "on-tertiary-fixed": "#281900",
+              "tertiary-fixed": "#ffdeac",
+              "surface-variant": "#e0e3e5",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e6e8ea",
+              "on-surface-variant": "#454652",
+              "on-primary-container": "#cbcfff",
+              "on-error": "#ffffff",
+              "primary": "#2b3896",
+              "outline-variant": "#c5c5d4",
+              "on-secondary-fixed-variant": "#00504a",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "surface-container-highest": "#e0e3e5",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#bcc2ff",
+              "surface-tint": "#4955b3",
+              "on-background": "#191c1e",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#eceef0",
+              "surface-container-low": "#f2f4f6",
+              "on-surface": "#191c1e",
+              "secondary-fixed-dim": "#71d7cd",
+              "tertiary-fixed-dim": "#ffba38",
+              "outline": "#757684",
+              "on-secondary": "#ffffff",
+              "tertiary": "#5b3d00",
+              "on-tertiary-fixed-variant": "#604100",
+              "on-tertiary-container": "#ffc971",
+              "on-primary-fixed-variant": "#303c9a",
+              "error-container": "#ffdad6",
+              "background": "#f8f9fb",
+              "on-secondary-fixed": "#00201d",
+              "primary-fixed": "#dfe0ff",
+              "inverse-primary": "#bcc2ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto left-1/2 -translate-x-1/2">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-bold tracking-tighter text-indigo-900">Cognitive Sanctuary</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 font-medium hover:text-indigo-600 transition-colors" href="#">Library</a>
+<a class="text-slate-500 font-medium hover:text-indigo-600 transition-colors" href="#">Activity</a>
+<a class="text-indigo-700 font-bold border-b-2 border-indigo-600" href="#">Reports</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-slate-600 p-2 hover:bg-slate-100 rounded-full cursor-pointer">shield_lock</span>
+<span class="material-symbols-outlined text-slate-600 p-2 hover:bg-slate-100 rounded-full cursor-pointer">settings</span>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl font-semibold hover:scale-105 transition-transform active:scale-95">Sign Out</button>
+</div>
+</nav>
+<!-- Side Navigation Sidebar -->
+<aside class="h-screen w-72 fixed left-0 top-0 pt-24 pb-8 px-6 flex flex-col bg-slate-50 border-r-0 hidden lg:flex">
+<div class="flex items-center gap-3 mb-10">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<h3 class="text-indigo-900 font-extrabold text-lg leading-tight">The Sanctuary</h3>
+<p class="text-xs text-slate-500 font-medium">Secure Workspace</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">book_5</span>
+<span class="font-manrope font-semibold">Resources</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-manrope font-semibold">Security Vault</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-indigo-50 text-indigo-800 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-manrope font-semibold">Student Progress</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-manrope font-semibold">Help Center</span>
+</a>
+</nav>
+<div class="mt-auto space-y-4">
+<button class="w-full py-3 px-4 bg-primary text-on-primary rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined">add</span>
+                New Request
+            </button>
+<div class="flex items-center justify-around text-slate-400 text-xs font-semibold">
+<a class="hover:text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">lock</span> Privacy
+                </a>
+<a class="hover:text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">description</span> Terms
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-72 pt-28 pb-12 px-8 max-w-7xl mx-auto">
+<!-- Header Section: Student Profile & Quick Stats -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<nav class="flex items-center gap-2 text-sm font-medium text-slate-500 mb-4">
+<span>Grade 11</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary-container">Elias Vance</span>
+</nav>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-2">Academic Trajectory</h1>
+<p class="text-slate-500 max-w-xl text-lg">Detailed insight into performance metrics and AI-assisted cognitive development patterns.</p>
+</div>
+<div class="flex items-center gap-4 bg-secondary-container p-4 rounded-2xl">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-secondary-container uppercase tracking-wider">Vault Status</p>
+<p class="text-on-secondary-container font-semibold">Secured by Auth0 API</p>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Learning Curve (Wide Bento) -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-low rounded-[2rem] p-8">
+<div class="flex items-center justify-between mb-10">
+<h3 class="text-2xl font-bold tracking-tight">Cognitive Growth Curve</h3>
+<div class="flex items-center gap-2 text-sm font-bold bg-white px-4 py-2 rounded-full border border-outline-variant/15 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Performance
+                        <span class="w-2 h-2 rounded-full bg-secondary-fixed-dim ml-2"></span> AI Interaction
+                    </div>
+</div>
+<div class="h-64 flex items-end justify-between gap-1 relative pt-10">
+<!-- Simulated Graph -->
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[40%]" title="Week 1"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[55%]" title="Week 2"></div>
+<div class="flex-1 bg-primary/30 rounded-t-lg h-[48%]" title="Week 3"></div>
+<div class="flex-1 bg-primary/50 rounded-t-lg h-[72%]" title="Week 4"></div>
+<div class="flex-1 bg-primary/70 rounded-t-lg h-[65%]" title="Week 5"></div>
+<div class="flex-1 bg-primary/90 rounded-t-lg h-[88%]" title="Week 6"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[95%]" title="Week 7"></div>
+<!-- Overlay Trend Line (Stylized SVG) -->
+<svg class="absolute inset-0 h-full w-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,90 Q15,85 30,70 T60,40 T100,10" fill="none" stroke="#2b3896" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0,90 Q15,85 30,70 T60,40 T100,10" fill="none" stroke="#2b3896" stroke-opacity="0.1" stroke-width="8"></path>
+</svg>
+</div>
+<div class="flex justify-between text-xs font-bold text-slate-400 mt-6 tracking-widest uppercase">
+<span>Sep 01</span>
+<span>Sep 15</span>
+<span>Oct 01</span>
+<span>Oct 15</span>
+<span>Nov 01</span>
+<span>Current</span>
+</div>
+</div>
+<!-- Subject Mastery (Tall Bento) -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-lowest border border-outline-variant/15 rounded-[2rem] p-8 shadow-sm">
+<h3 class="text-xl font-bold mb-8">Subject Mastery</h3>
+<div class="space-y-8">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-bold text-slate-700">Advanced Calculus</span>
+<span class="font-bold text-primary">94%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 94%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-bold text-slate-700">Classical Mechanics</span>
+<span class="font-bold text-primary">78%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 78%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-bold text-slate-700">Literature Analysis</span>
+<span class="font-bold text-primary">89%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 89%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-bold text-slate-700">Cellular Biology</span>
+<span class="font-bold text-primary">62%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim" style="width: 62%"></div>
+</div>
+</div>
+</div>
+<div class="mt-12 p-6 bg-tertiary-fixed/20 rounded-2xl">
+<p class="text-sm font-bold text-on-tertiary-fixed mb-1">Growth Recommendation</p>
+<p class="text-sm text-on-tertiary-fixed/80">Biology modules require additional recursive testing. AI tutor suggests scheduled reinforcement.</p>
+</div>
+</div>
+<!-- Struggle Area Highlights (Asymmetric Accent) -->
+<div class="col-span-12 md:col-span-5 bg-primary-container text-on-primary-container rounded-[2rem] p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-tertiary-fixed">warning</span>
+<h3 class="text-2xl font-bold tracking-tight">Cognitive Frictions</h3>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="mt-1 w-2 h-2 rounded-full bg-tertiary-fixed"></div>
+<div>
+<p class="font-bold text-white">Complex Logarithms</p>
+<p class="text-sm text-on-primary-container/70">Frequent session resets detected during multi-step derivation processes.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 w-2 h-2 rounded-full bg-tertiary-fixed"></div>
+<div>
+<p class="font-bold text-white">Source Verification</p>
+<p class="text-sm text-on-primary-container/70">User frequently bypasses AI verification steps in Research Vault.</p>
+</div>
+</li>
+</ul>
+</div>
+<button class="mt-12 w-full py-4 bg-white text-primary rounded-xl font-extrabold flex items-center justify-center gap-2 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+                    View AI Remediation Plan
+                </button>
+</div>
+<!-- Recent AI Sessions (Interactive List) -->
+<div class="col-span-12 md:col-span-7 bg-surface-container-low rounded-[2rem] p-8 overflow-hidden">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-bold tracking-tight">Vault Interaction Logs</h3>
+<button class="text-sm font-bold text-primary flex items-center gap-1 hover:underline">
+                        History <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-4 max-h-80 overflow-y-auto no-scrollbar pr-2">
+<!-- Session Card 1 -->
+<div class="bg-white rounded-2xl p-5 flex items-center justify-between hover:scale-[1.01] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">database</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Calculus API Call #882</p>
+<p class="text-xs text-slate-500">Duration: 14m 22s • 10.4k Tokens Used</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase">Success</span>
+</div>
+<!-- Session Card 2 -->
+<div class="bg-white rounded-2xl p-5 flex items-center justify-between hover:scale-[1.01] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400">lock_open</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">History Vault Decryption</p>
+<p class="text-xs text-slate-500">Duration: 2m 05s • Manual Override</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-slate-100 text-slate-500 rounded-full text-xs font-bold uppercase">Verified</span>
+</div>
+<!-- Session Card 3 -->
+<div class="bg-white rounded-2xl p-5 flex items-center justify-between hover:scale-[1.01] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">chat_bubble</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">AI Synthesis: Biology Unit 4</p>
+<p class="text-xs text-slate-500">Duration: 45m 12s • High Interaction</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase">Complete</span>
+</div>
+<!-- Session Card 4 -->
+<div class="bg-white rounded-2xl p-5 flex items-center justify-between hover:scale-[1.01] transition-transform opacity-60">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-600">error</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Token Limit Warning</p>
+<p class="text-xs text-slate-500">Automated System Interruption</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-bold uppercase">Blocked</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mentorship Insight Section (Full Width Editorial) -->
+<section class="mt-12 bg-white rounded-[2.5rem] p-10 flex flex-col md:flex-row gap-12 items-center relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary-fixed/10 rounded-full blur-[100px]"></div>
+<div class="w-full md:w-1/3 relative">
+<img alt="A close-up studio portrait of a focused teenager student with warm lighting and a soft neutral background" class="w-full h-80 object-cover rounded-[2rem] shadow-xl" data-alt="Close-up studio portrait of a focused teenager student with warm cinematic lighting and a soft neutral blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDy3S4uZZfSssu3Xsvpgn61KlFeWcIzKY98adgN-5fTRXxzA9OaFInrMKwHTbhaJ5mOQfUOB8nb1LoAwhgK7G4FX8oPFb0VtZkbe1kdtlehFqJrAB3HdkyLsQbed8T3LALjXB1yXNf4KujOxwfCgm2_w_JXFRd_q-PEtggs01Hle5wgJ5rFqXaz5f9jFCuQzPFGJlGfEJ6FQaCnLS-he28jUoUqHNv5ZDq7fUNawEJmD_S40imruTk1TyclBz3APR_XlWmduCj5X8S"/>
+<div class="absolute -top-4 -right-4 bg-primary text-white p-4 rounded-2xl flex flex-col items-center shadow-lg">
+<span class="text-3xl font-extrabold">A+</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Consistency</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-slate-600 font-bold text-xs uppercase tracking-widest mb-6">
+<span class="material-symbols-outlined text-sm">stars</span> AI Mentor Sentiment
+                </div>
+<h2 class="text-3xl font-bold tracking-tight mb-6 leading-tight">"Elias shows remarkable cognitive resilience. His ability to synthesize abstract physics concepts with real-world data is currently 15% above the peer median."</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-slate-600 font-medium">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span>Engagement consistency remains high during evening sessions.</span>
+</div>
+<div class="flex items-center gap-4 text-slate-600 font-medium">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span>Successfully navigated 12 encrypted vault assignments this week.</span>
+</div>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-xl font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">Download PDF Full Report</button>
+<button class="px-8 py-4 bg-surface-container-highest text-on-surface rounded-xl font-bold hover:bg-slate-200 transition-colors">Compare with Cohort</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button (FAB) Suppressed per rules for Details page -->
+<!-- Navigation Shell Separated via Tonal shift only - No Borders -->
+</body></html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Learning History | Cognitive Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#71d7cd",
+                        "primary": "#2b3896",
+                        "on-primary-fixed-variant": "#303c9a",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "on-secondary-container": "#006f67",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#00201d",
+                        "surface-container": "#eceef0",
+                        "inverse-surface": "#2d3133",
+                        "outline": "#757684",
+                        "on-primary-container": "#cbcfff",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f8f9fb",
+                        "primary-container": "#4551af",
+                        "on-tertiary-fixed": "#281900",
+                        "on-primary-fixed": "#000c62",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary": "#006a63",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-primary": "#bcc2ff",
+                        "secondary-fixed": "#8ef4e9",
+                        "surface-bright": "#f8f9fb",
+                        "on-tertiary-container": "#ffc971",
+                        "background": "#f8f9fb",
+                        "secondary-container": "#8bf1e6",
+                        "primary-fixed-dim": "#bcc2ff",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "tertiary-fixed-dim": "#ffba38",
+                        "tertiary-container": "#795300",
+                        "tertiary": "#5b3d00",
+                        "primary-fixed": "#dfe0ff",
+                        "on-error": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "surface-tint": "#4955b3",
+                        "on-surface-variant": "#454652",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-fixed": "#ffdeac",
+                        "outline-variant": "#c5c5d4",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-background": "#191c1e"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fb; color: #191c1e; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="bg-[#f8f9fb]/70 backdrop-blur-xl sticky top-0 z-50 flex justify-between items-center w-full px-8 py-4 max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tight text-[#3F51B5]">Cognitive Sanctuary</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#3F51B5] font-bold border-b-2 border-[#3F51B5] pb-1" href="#">History</a>
+<a class="text-slate-500 font-medium hover:text-[#3F51B5] transition-colors" href="#">Resources</a>
+<a class="text-slate-500 font-medium hover:text-[#3F51B5] transition-colors" href="#">Vault</a>
+<a class="text-slate-500 font-medium hover:text-[#3F51B5] transition-colors" href="#">Users</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100/50 rounded-lg transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100/50 rounded-lg transition-all">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary-container overflow-hidden">
+<img alt="User profile avatar" data-alt="Portrait of a young male student with a kind expression and modern glasses in a bright architectural setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMnM5dwfKhkkg1wGqb0J9vWQzosnUXiWT3quMCeO0NtyaH3qtQ1qROvBGYgxRVJcJQVEKbTucfcyPyYy2KTUanfNrkRthujyKZKiTZ2qv7A1nEgTiq_cNpiWNcsxIYZIcGKSZ-j_4wjtlOoEpcxUziwfntLWPCl9Pfzzvod99yHwW1XGwOWKnZotZMQ0faTvsbQ2HRJ9cbwzsdQk6GYscAUndFcc05Men42FOKnkpLyyFN0OJKqvjWhjNU_QqPfwsCwn9TTP3rqCVX"/>
+</div>
+</div>
+</header>
+<div class="flex">
+<!-- Sidebar -->
+<aside class="h-[calc(100vh-72px)] w-64 fixed left-0 top-[72px] hidden lg:flex flex-col bg-[#f2f4f6] p-6 gap-4">
+<div class="mb-6">
+<p class="text-xs uppercase tracking-widest text-slate-400 font-bold mb-4">Management Portal</p>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-[#3F51B5] rounded-xl shadow-sm transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-semibold">Sessions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-xl transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-xl transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span>Security</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-xl transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Admin</span>
+</a>
+</div>
+</div>
+<button class="mt-4 bg-gradient-to-br from-primary to-primary-container text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                New Session
+            </button>
+<div class="mt-auto space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-xl transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-xl transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 lg:ml-64 p-8 lg:p-12 max-w-7xl mx-auto w-full">
+<header class="mb-12">
+<h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight text-on-surface mb-2">Learning History</h1>
+<p class="text-on-surface-variant text-lg">Revisit your cognitive journeys and deep-dive analyses.</p>
+</header>
+<!-- Search & Filters -->
+<section class="mb-10 flex flex-col md:flex-row gap-4 items-center">
+<div class="relative flex-1 w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-2xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-slate-400" placeholder="Search sessions, subjects, or concepts..." type="text"/>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<button class="flex items-center gap-2 px-6 py-4 bg-surface-container-low text-on-surface font-semibold rounded-2xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                        Subject
+                    </button>
+<button class="flex items-center gap-2 px-6 py-4 bg-surface-container-low text-on-surface font-semibold rounded-2xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                        Date
+                    </button>
+</div>
+</section>
+<!-- Bento Grid of History Items -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+<!-- Session Item 1: Algebra II -->
+<article class="group bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-300 rounded-[2rem] p-8 flex flex-col lg:flex-row gap-8 items-start relative overflow-hidden">
+<div class="absolute top-0 left-0 w-2 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="functions">functions</span>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">Algebra II: Quadratic Equations</h2>
+<span class="text-sm font-medium text-slate-500 uppercase tracking-widest bg-slate-100 px-3 py-1 rounded-full">Oct 24, 2023</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-3xl">
+                            Exploration of the vertex form and standard form conversions. Solved a complex projectile motion problem involving gravitational constants and time-of-flight calculations.
+                        </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 rounded-lg bg-surface-variant text-on-surface-variant text-xs font-semibold">Mathematics</span>
+<span class="px-3 py-1 rounded-lg bg-surface-variant text-on-surface-variant text-xs font-semibold">Quadratic Formula</span>
+<span class="px-3 py-1 rounded-lg bg-surface-variant text-on-surface-variant text-xs font-semibold">98% Accuracy</span>
+</div>
+</div>
+<button class="w-full lg:w-auto px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-sm border border-outline-variant/15 hover:scale-105 transition-all flex items-center justify-center gap-2 whitespace-nowrap">
+                        Review Session
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</article>
+<!-- Session Item 2: Literature -->
+<article class="group bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-300 rounded-[2rem] p-8 flex flex-col lg:flex-row gap-8 items-start relative overflow-hidden">
+<div class="absolute top-0 left-0 w-2 h-full bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="menu_book">menu_book</span>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">Modernist Literature Analysis</h2>
+<span class="text-sm font-medium text-slate-500 uppercase tracking-widest bg-slate-100 px-3 py-1 rounded-full">Oct 22, 2023</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-3xl">
+                            Deep dive into T.S. Eliot's "The Waste Land." Analyzed the use of fragmentation as a reflection of post-war disillusionment. Compared motifs across Ezra Pound's Cantos.
+                        </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 rounded-lg bg-surface-variant text-on-surface-variant text-xs font-semibold">English</span>
+<span class="px-3 py-1 rounded-lg bg-surface-variant text-on-surface-variant text-xs font-semibold">Modernism</span>
+<span class="px-3 py-1 rounded-lg bg-surface-variant text-on-surface-variant text-xs font-semibold">T.S. Eliot</span>
+</div>
+</div>
+<button class="w-full lg:w-auto px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-sm border border-outline-variant/15 hover:scale-105 transition-all flex items-center justify-center gap-2 whitespace-nowrap">
+                        Review Session
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</article>
+<!-- Session Item 3: Physics -->
+<article class="group bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-300 rounded-[2rem] p-8 flex flex-col lg:flex-row gap-8 items-start relative overflow-hidden">
+<div class="absolute top-0 left-0 w-2 h-full bg-tertiary-fixed-dim opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="bolt">bolt</span>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">Physics: Electromagnetism</h2>
+<span class="text-sm font-medium text-slate-500 uppercase tracking-widest bg-slate-100 px-3 py-1 rounded-full">Oct 19, 2023</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-3xl">
+                            Application of Gauss's Law to calculate electric fields in non-uniform charge distributions. Derived the capacitance for a spherical capacitor with dielectric materials.
+                        </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 rounded-lg bg-surface-variant text-on-surface-variant text-xs font-semibold">Science</span>
+<span class="px-3 py-1 rounded-lg bg-surface-variant text-on-surface-variant text-xs font-semibold">AP Physics C</span>
+<span class="px-3 py-1 rounded-lg bg-surface-variant text-on-surface-variant text-xs font-semibold">Exam Prep</span>
+</div>
+</div>
+<button class="w-full lg:w-auto px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-sm border border-outline-variant/15 hover:scale-105 transition-all flex items-center justify-center gap-2 whitespace-nowrap">
+                        Review Session
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</article>
+<!-- Session Item 4: Secure Vault Status (System Note) -->
+<article class="col-span-full mt-8 p-10 bg-secondary-container rounded-[2.5rem] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<div class="flex items-start gap-8 relative z-10">
+<div class="flex-shrink-0 w-14 h-14 rounded-full bg-on-secondary-container text-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-bold text-on-secondary-container font-headline">Secure Token Vault Active</h3>
+<p class="text-on-secondary-container/80 text-base max-w-2xl leading-relaxed">
+                                All session transcripts and generated data are currently encrypted using your Auth0 Secure Token. Your academic privacy is maintained in the sanctuary.
+                            </p>
+<button class="mt-4 px-6 py-2 bg-on-secondary-container text-secondary-container rounded-full text-sm font-bold hover:bg-secondary-fixed transition-colors">
+                                Manage Security
+                            </button>
+</div>
+</div>
+</article>
+</div>
+</main>
+</div>
+<!-- Mobile Navigation Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-lg border-none flex justify-around items-center py-4 px-6 z-50">
+<button class="flex flex-col items-center gap-1 text-[#3F51B5]">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] font-bold">History</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="text-[10px] font-medium">Resources</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span class="text-[10px] font-medium">Vault</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+</nav>
+<!-- Floating Action Button (Supressed on History/Detail screen as per rule, but keeping logic in mind if needed for Home) -->
+</body></html>
