@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Join the Sanctuary | Cognitive Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#eceef0",
+              "on-surface": "#191c1e",
+              "surface-bright": "#f8f9fb",
+              "error": "#ba1a1a",
+              "primary-container": "#4551af",
+              "on-surface-variant": "#454652",
+              "secondary-fixed-dim": "#71d7cd",
+              "tertiary-fixed-dim": "#ffba38",
+              "inverse-on-surface": "#eff1f3",
+              "on-primary-fixed": "#000c62",
+              "on-primary-container": "#cbcfff",
+              "on-error-container": "#93000a",
+              "secondary": "#006a63",
+              "on-secondary-container": "#006f67",
+              "surface-variant": "#e0e3e5",
+              "on-primary": "#ffffff",
+              "background": "#f8f9fb",
+              "surface": "#f8f9fb",
+              "inverse-surface": "#2d3133",
+              "primary-fixed": "#dfe0ff",
+              "primary-fixed-dim": "#bcc2ff",
+              "on-tertiary-fixed-variant": "#604100",
+              "secondary-container": "#8bf1e6",
+              "inverse-primary": "#bcc2ff",
+              "secondary-fixed": "#8ef4e9",
+              "outline-variant": "#c5c5d4",
+              "on-background": "#191c1e",
+              "surface-container-low": "#f2f4f6",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#281900",
+              "tertiary": "#5b3d00",
+              "surface-container-highest": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "surface-tint": "#4955b3",
+              "surface-container-high": "#e6e8ea",
+              "outline": "#757684",
+              "tertiary-fixed": "#ffdeac",
+              "tertiary-container": "#795300",
+              "on-secondary-fixed-variant": "#00504a",
+              "on-primary-fixed-variant": "#303c9a",
+              "surface-dim": "#d8dadc",
+              "on-tertiary-container": "#ffc971",
+              "primary": "#2b3896",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#00201d",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .indigo-grid {
+            background-color: #1a1c2e;
+            background-image: radial-gradient(#2b3896 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<main class="min-h-screen flex flex-col md:flex-row overflow-hidden">
+<!-- Left Side: Dark Indigo Narrative Shell -->
+<section class="hidden md:flex w-1/2 indigo-grid relative items-center justify-center p-12 overflow-hidden">
+<!-- Decorative Elements -->
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px]"></div>
+<div class="relative z-10 max-w-lg space-y-12">
+<!-- Brand Anchor -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+</div>
+<span class="font-headline font-extrabold text-2xl text-white tracking-tight">Cognitive Sanctuary</span>
+</div>
+<!-- Narrative Copy -->
+<div class="space-y-6">
+<h1 class="font-headline text-5xl font-extrabold text-white leading-tight tracking-tight">
+                        Unlocking Your <span class="text-primary-fixed">Potential</span> Through Focused Intelligence.
+                    </h1>
+<p class="text-on-primary-container text-lg leading-relaxed max-w-md">
+                        Step into a workspace designed for deep cognition. Our sanctuary protects your data while elevating your academic performance.
+                    </p>
+</div>
+<!-- Security Badges -->
+<div class="flex flex-wrap gap-4 pt-4">
+<div class="glass-panel px-5 py-3 rounded-2xl flex items-center gap-3 border border-white/5">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Encrypted by</span>
+<span class="text-white font-semibold text-sm">Auth0 Identity</span>
+</div>
+</div>
+<div class="glass-panel px-5 py-3 rounded-2xl flex items-center gap-3 border border-white/5">
+<span class="material-symbols-outlined text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Standard</span>
+<span class="text-white font-semibold text-sm">GDPR Complaint</span>
+</div>
+</div>
+</div>
+<!-- Social Proof / Illustration -->
+<div class="pt-8 opacity-40">
+<img class="w-full h-48 object-cover rounded-3xl grayscale brightness-125" data-alt="abstract minimalist architectural render of a futuristic library with soft blue lighting and organic wooden structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtBq5SUnbsKGImr3pgTkA5ZMVpTuKNHXpZp25E3l571PhKmhHgmN8-nFu7Dq6zO09coaWhh2sYud-Dz5di3-nvqY7ziRY96KCdnRZ0llNbuNKxjf7pavuWcTdUhJCNabLsqcr2MJ8vR8JygjS2TtPWueWosBByyzxTx5IfY31--BMPeOX3DgS67UNqbRMVvoiE9zm6H0Kuq4LgDvSs4YwK-i8rTsU-hekZg8TB3kwn2OyYPugNtdImjdpsizSTuiz2VXKHWwI8HJUZ"/>
+</div>
+</div>
+</section>
+<!-- Right Side: Registration Workspace -->
+<section class="w-full md:w-1/2 bg-surface-container-lowest flex items-center justify-center p-6 md:p-16">
+<div class="w-full max-w-md space-y-10">
+<!-- Header -->
+<div class="space-y-2">
+<h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight">Begin your journey</h2>
+<p class="text-on-surface-variant text-sm">Create your private workspace in seconds.</p>
+</div>
+<!-- Social Sign-up -->
+<div class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 px-4 py-3 rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-200 group">
+<img class="w-5 h-5" data-alt="Google logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC18yN2glPKC99m1gmWfcxtsYGNpX97HBjGmnCEsK4dACm9INNH5DW3mqxyZ_LSpgnWnyb6gV013vx6CawwBJ5R3Dq932RwubVgFgdI0KBaQwUtRyJvGRUVBfF2a5xftlig__cQO7a8DFC_D6CrM95Zws2XWcuoRr4jO2n4w_WZ71E2Oeg42_cAjpLQKJ_TYvTOs9j4EKLe_DRMfY6sj_wdT3uYUDOUK6Ru1oXiGmq6VpMV-ZxnD99XBdkY0z9bPxiA4cz2SDQcIz5e"/>
+<span class="text-on-surface font-medium text-sm">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 px-4 py-3 rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-200 group">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span class="text-on-surface font-medium text-sm">GitHub</span>
+</button>
+</div>
+<div class="flex items-center gap-4 py-2">
+<div class="h-px flex-1 bg-surface-variant/30"></div>
+<span class="text-[11px] font-bold text-outline uppercase tracking-widest">or email registration</span>
+<div class="h-px flex-1 bg-surface-variant/30"></div>
+</div>
+</div>
+<!-- Form -->
+<form class="space-y-5">
+<!-- Full Name -->
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider px-1">Full Name</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 text-on-surface placeholder:text-outline/50 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200" placeholder="Alex Rivers" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider px-1">Email Address</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 text-on-surface placeholder:text-outline/50 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200" placeholder="alex@sanctuary.edu" type="email"/>
+</div>
+</div>
+<!-- Passwords -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider px-1">Password</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 text-on-surface placeholder:text-outline/50 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200" placeholder="••••••••" type="password"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider px-1">Confirm</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 text-on-surface placeholder:text-outline/50 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Password Strength Indicator -->
+<div class="px-1 space-y-2">
+<div class="flex gap-1 h-1.5">
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-surface-variant rounded-full"></div>
+</div>
+<p class="text-[11px] text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                            Secure password strength
+                        </p>
+</div>
+<!-- CTA -->
+<div class="pt-4">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-4 rounded-2xl font-bold text-base shadow-xl shadow-primary/10 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" type="submit">
+                            Create Account
+                        </button>
+</div>
+</form>
+<!-- Footer Actions -->
+<div class="text-center space-y-8">
+<p class="text-sm text-on-surface-variant">
+                        Already have an account? 
+                        <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4" href="#">Sign in</a>
+</p>
+<div class="pt-8 border-t border-surface-variant/20">
+<div class="flex items-center justify-center gap-2 mb-3">
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-[0.2em]">Sanctuary Shield Active</span>
+</div>
+<p class="text-[10px] leading-relaxed text-outline px-6">
+                            Your credentials are never stored on our local servers. We use Auth0 Enterprise-grade encryption to ensure your identity remains private and your session secure.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
